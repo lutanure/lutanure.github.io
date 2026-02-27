@@ -713,12 +713,58 @@ p {
     border-radius: 2rem;
     font-size: 0.95rem;
     border: 1px solid #d0e0d8;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    cursor: default;
 }
 
 .interests-list span:hover {
     background-color: #2d5f3f;
     color: white;
+}
+
+.interests-list span[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f4228;
+    color: white;
+    padding: 0.65rem 0.9rem;
+    border-radius: 0.5rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    width: 270px;
+    white-space: normal;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 20;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.interests-list span[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #1f4228;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.interests-list span[data-tooltip]:hover::after,
+.interests-list span[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Footer */
