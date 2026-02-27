@@ -130,11 +130,11 @@ p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #2d5f3f 0%, #1f4228 100%);
+    background: #e8f0ec;
     padding: 6rem 2rem;
     text-align: center;
     border-bottom: 3px solid #1f4228;
-    color: white;
+    color: #333;
 }
 
 .hero-content {
@@ -143,13 +143,13 @@ p {
 }
 
 .hero h1 {
-    color: white;
+    color: #2d5f3f;
     margin-bottom: 1rem;
 }
 
 .tagline {
     font-size: 1.25rem;
-    color: #e8f0ec;
+    color: #555;
     margin-bottom: 2rem;
     font-weight: 400;
 }
