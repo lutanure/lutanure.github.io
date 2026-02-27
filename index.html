@@ -22,21 +22,25 @@
     <nav class="navbar" id="navbar">
         <a href="#home" class="nav-brand">LT</a>
         <ul class="nav-menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#interests">Interests</a></li>
+            <li><a href="#about"      data-i18n="nav.about">About</a></li>
+            <li><a href="#projects"   data-i18n="nav.projects">Projects</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#education"  data-i18n="nav.education">Education</a></li>
+            <li><a href="#skills"     data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#leadership" data-i18n="nav.leadership">Leadership</a></li>
+            <li><a href="#interests"  data-i18n="nav.interests">Interests</a></li>
         </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn"        data-lang="pt">PT</button>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Luisa M. Tanure</h1>
-            <p class="tagline">Computer Science & Statistics @ UNC Chapel Hill building APIs, systems, and software products</p>
+            <p class="tagline" data-i18n="hero.tagline">Computer Science &amp; Statistics @ UNC Chapel Hill building APIs, systems, and software products</p>
             <div class="contact-links">
                 <a href="mailto:luisa.mtanure@gmail.com" class="btn btn-outline">Email</a>
                 <a href="https://github.com/lutanure" target="_blank" class="btn btn-outline">GitHub</a>
@@ -48,15 +52,15 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2>About</h2>
-            <p class="section-text">Hi! I'm a Computer Science and Statistics & Analytics student at the University of North Carolina at Chapel Hill graduating in May 2027. I have mainly focused on backend engineering, APIs, systems architecture, and software engineering workflows, with experience building production pipelines and scalable backend services. I'm also a member of the UNC Quantum Computing club!</p>
+            <h2 data-i18n="nav.about">About</h2>
+            <p class="section-text" data-i18n="about.text">Hi! I'm a Computer Science and Statistics &amp; Analytics student at the University of North Carolina at Chapel Hill graduating in May 2027. I have mainly focused on backend engineering, APIs, systems architecture, and software engineering workflows, with experience building production pipelines and scalable backend services. I'm also a member of the UNC Quantum Computing club!</p>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 data-i18n="nav.projects">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <button class="project-toggle" aria-expanded="false">
@@ -64,8 +68,8 @@
                         <span class="toggle-icon">▼</span>
                     </button>
                     <div class="project-details">
-                        <p>Refactoring CSXL web platform to support agentic AI development workflows, acceptance testing, and repository standards.</p>
-                        <a href="https://tarheels.live/s26comp523teama/" target="_blank" class="project-link">View Project →</a>
+                        <p data-i18n="project1.desc">Refactoring CSXL web platform to support agentic AI development workflows, acceptance testing, and repository standards.</p>
+                        <a href="https://tarheels.live/s26comp523teama/" target="_blank" class="project-link" data-i18n="project1.link">View Project →</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -74,8 +78,8 @@
                         <span class="toggle-icon">▼</span>
                     </button>
                     <div class="project-details">
-                        <p>SwiftUI wellness tracking application featuring visualization dashboards and historical trend analysis.</p>
-                        <a href="https://github.com/lutanure/dotTrack" target="_blank" class="project-link">View on GitHub →</a>
+                        <p data-i18n="project2.desc">SwiftUI wellness tracking application featuring visualization dashboards and historical trend analysis.</p>
+                        <a href="https://github.com/lutanure/dotTrack" target="_blank" class="project-link" data-i18n="project2.link">View on GitHub →</a>
                     </div>
                 </div>
                 <div class="project-card">
@@ -84,7 +88,7 @@
                         <span class="toggle-icon">▼</span>
                     </button>
                     <div class="project-details">
-                        <p>Arcade-style JavaFX game with level progression mechanics using MVC, Observer, and Factory patterns.</p>
+                        <p data-i18n="project3.desc">Arcade-style JavaFX game with level progression mechanics using MVC, Observer, and Factory patterns.</p>
                     </div>
                 </div>
             </div>
@@ -94,26 +98,26 @@
     <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
-            <h2>Experience</h2>
+            <h2 data-i18n="nav.experience">Experience</h2>
             <div class="experience-item">
                 <div class="experience-header">
-                    <h3>BTG Pactual — Software Engineering Intern</h3>
-                    <p class="location">São Paulo, Brazil | June 2025 – August 2025</p>
+                    <h3 data-i18n="exp1.role">BTG Pactual — Software Engineering Intern</h3>
+                    <p class="location" data-i18n="exp1.location">São Paulo, Brazil | June 2025 – August 2025</p>
                 </div>
                 <ul class="experience-list">
-                    <li>Designed OTP authentication REST API using Java and Spring Boot with secure token verification workflows</li>
-                    <li>Built real-time account balance pipeline consuming RabbitMQ events and materializing balances into PostgreSQL, saving $5K/month</li>
-                    <li>Supported full API lifecycle including testing, deployment, and monitoring</li>
+                    <li data-i18n="exp1.b1">Designed OTP authentication REST API using Java and Spring Boot with secure token verification workflows</li>
+                    <li data-i18n="exp1.b2">Built real-time account balance pipeline consuming RabbitMQ events and materializing balances into PostgreSQL, saving $5K/month</li>
+                    <li data-i18n="exp1.b3">Supported full API lifecycle including testing, deployment, and monitoring</li>
                 </ul>
             </div>
             <div class="experience-item">
                 <div class="experience-header">
-                    <h3>One by One NGO — Volunteer Intern</h3>
-                    <p class="location">Rio de Janeiro, Brazil | 2020–2023</p>
+                    <h3 data-i18n="exp2.role">One by One NGO — Volunteer Intern</h3>
+                    <p class="location" data-i18n="exp2.location">Rio de Janeiro, Brazil | 2020–2023</p>
                 </div>
                 <ul class="experience-list">
-                    <li>Taught computer science fundamentals to underserved students</li>
-                    <li>Led project-based learning and digital literacy initiatives</li>
+                    <li data-i18n="exp2.b1">Taught computer science fundamentals to underserved students</li>
+                    <li data-i18n="exp2.b2">Led project-based learning and digital literacy initiatives</li>
                 </ul>
             </div>
         </div>
@@ -122,20 +126,20 @@
     <!-- Education Section -->
     <section id="education" class="section">
         <div class="container">
-            <h2>Education</h2>
+            <h2 data-i18n="nav.education">Education</h2>
             <div class="education-item">
                 <h3>University of North Carolina at Chapel Hill</h3>
-                <p class="degree">Bachelor of Science in Computer Science and Statistics & Analytics</p>
-                <p class="expected">Expected May 2027</p>
+                <p class="degree" data-i18n="edu.degree">Bachelor of Science in Computer Science and Statistics &amp; Analytics</p>
+                <p class="expected" data-i18n="edu.expected">Expected May 2027</p>
 
-                <h4>Relevant Coursework</h4>
+                <h4 data-i18n="edu.coursework">Relevant Coursework</h4>
                 <div class="coursework-list">
-                    <span class="course-badge">Data Structures and Analysis</span>
-                    <span class="course-badge">Computer Organization</span>
-                    <span class="course-badge">Systems Fundamentals</span>
-                    <span class="course-badge">Foundations of Software Engineering</span>
-                    <span class="course-badge">Software Engineering Laboratory</span>
-                    <span class="course-badge">Models of Languages and Computation</span>
+                    <span class="course-badge" data-i18n="course1">Data Structures and Analysis</span>
+                    <span class="course-badge" data-i18n="course2">Computer Organization</span>
+                    <span class="course-badge" data-i18n="course3">Systems Fundamentals</span>
+                    <span class="course-badge" data-i18n="course4">Foundations of Software Engineering</span>
+                    <span class="course-badge" data-i18n="course5">Software Engineering Laboratory</span>
+                    <span class="course-badge" data-i18n="course6">Models of Languages and Computation</span>
                 </div>
             </div>
         </div>
@@ -144,10 +148,10 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <h2 data-i18n="skills.title">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3 data-i18n="skills.languages">Languages</h3>
                     <div class="skill-buttons">
                         <span class="skill-badge"><i class="devicon-java-plain"></i>Java</span>
                         <span class="skill-badge"><i class="devicon-python-plain"></i>Python</span>
@@ -158,7 +162,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools</h3>
+                    <h3 data-i18n="skills.tools">Tools</h3>
                     <div class="skill-buttons">
                         <span class="skill-badge"><i class="devicon-git-plain"></i>Git</span>
                         <span class="skill-badge"><i class="devicon-jenkins-plain"></i>Jenkins</span>
@@ -168,7 +172,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Frameworks</h3>
+                    <h3 data-i18n="skills.frameworks">Frameworks</h3>
                     <div class="skill-buttons">
                         <span class="skill-badge"><i class="devicon-spring-plain"></i>Spring Boot</span>
                         <span class="skill-badge"><i class="devicon-fastapi-plain"></i>FastAPI</span>
@@ -181,32 +185,32 @@
     <!-- Leadership Section -->
     <section id="leadership" class="section">
         <div class="container">
-            <h2>Leadership</h2>
+            <h2 data-i18n="nav.leadership">Leadership</h2>
             <div class="leadership-item">
                 <h3>Pearl Hacks Hackathon</h3>
                 <div class="leadership-role">
-                    <h4>Director of Event Support (Apr 2025 – Present)</h4>
+                    <h4 data-i18n="lead1.role1">Director of Event Support (Apr 2025 – Present)</h4>
                     <ul class="leadership-list">
-                        <li>Manage logistics for 400+ attendees</li>
-                        <li>Coordinate mentors and volunteers</li>
-                        <li>Support $70K budget</li>
+                        <li data-i18n="lead1.b1">Manage logistics for 400+ attendees</li>
+                        <li data-i18n="lead1.b2">Coordinate mentors and volunteers</li>
+                        <li data-i18n="lead1.b3">Support $70K budget</li>
                     </ul>
                 </div>
                 <div class="leadership-role">
-                    <h4>Director of Hacker Experience (Apr 2024 – Apr 2025)</h4>
+                    <h4 data-i18n="lead1.role2">Director of Hacker Experience (Apr 2024 – Apr 2025)</h4>
                     <ul class="leadership-list">
-                        <li>Led mentor coordination</li>
-                        <li>Delivered Hack 101 workshops</li>
+                        <li data-i18n="lead1.b4">Led mentor coordination</li>
+                        <li data-i18n="lead1.b5">Delivered Hack 101 workshops</li>
                     </ul>
                 </div>
             </div>
             <div class="leadership-item">
                 <h3>UNC Computer Science Experience Labs</h3>
                 <div class="leadership-role">
-                    <h4>Student Ambassador (Aug 2025 – Present)</h4>
+                    <h4 data-i18n="lead2.role1">Student Ambassador (Aug 2025 – Present)</h4>
                     <ul class="leadership-list">
-                        <li>Support students during lab shifts</li>
-                        <li>Maintain collaborative learning environment</li>
+                        <li data-i18n="lead2.b1">Support students during lab shifts</li>
+                        <li data-i18n="lead2.b2">Maintain collaborative learning environment</li>
                     </ul>
                 </div>
             </div>
@@ -216,18 +220,18 @@
     <!-- Interests Section -->
     <section id="interests" class="section">
         <div class="container">
-            <h2>Interests</h2>
+            <h2 data-i18n="nav.interests">Interests</h2>
             <div class="interests-list">
-                <span>Quantum computing</span>
-                <span>Systems architecture</span>
-                <span>API development</span>
-                <span>Game development</span>
-                <span>UX/UI</span>
-                <span>Soccer</span>
-                <span>Basketball</span>
-                <span>Volleyball</span>
-                <span>Fantasy literature</span>
-                <span>Educational psychology</span>
+                <span data-i18n="interest1">Quantum computing</span>
+                <span data-i18n="interest2">Systems architecture</span>
+                <span data-i18n="interest3">API development</span>
+                <span data-i18n="interest4">Game development</span>
+                <span data-i18n="interest5">UX/UI</span>
+                <span data-i18n="interest6">Soccer</span>
+                <span data-i18n="interest7">Basketball</span>
+                <span data-i18n="interest8">Volleyball</span>
+                <span data-i18n="interest9">Fantasy literature</span>
+                <span data-i18n="interest10">Educational psychology</span>
             </div>
         </div>
     </section>
@@ -235,15 +239,185 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Luisa M. Tanure. All rights reserved.</p>
+            <p>&copy; 2026 Luisa M. Tanure. <span data-i18n="footer.rights">All rights reserved.</span></p>
         </div>
     </footer>
 
     <script>
-        // Hamburger menu toggle
+        // ─── Translations ────────────────────────────────────────────────────────────
+        const translations = {
+            en: {
+                // Nav
+                'nav.about':      'About',
+                'nav.projects':   'Projects',
+                'nav.experience': 'Experience',
+                'nav.education':  'Education',
+                'nav.skills':     'Skills',
+                'nav.leadership': 'Leadership',
+                'nav.interests':  'Interests',
+                // Hero
+                'hero.tagline': 'Computer Science & Statistics @ UNC Chapel Hill building APIs, systems, and software products',
+                // About
+                'about.text': "Hi! I'm a Computer Science and Statistics & Analytics student at the University of North Carolina at Chapel Hill graduating in May 2027. I have mainly focused on backend engineering, APIs, systems architecture, and software engineering workflows, with experience building production pipelines and scalable backend services. I'm also a member of the UNC Quantum Computing club!",
+                // Projects
+                'project1.desc': 'Refactoring CSXL web platform to support agentic AI development workflows, acceptance testing, and repository standards.',
+                'project1.link': 'View Project →',
+                'project2.desc': 'SwiftUI wellness tracking application featuring visualization dashboards and historical trend analysis.',
+                'project2.link': 'View on GitHub →',
+                'project3.desc': 'Arcade-style JavaFX game with level progression mechanics using MVC, Observer, and Factory patterns.',
+                // Experience
+                'exp1.role':     'BTG Pactual — Software Engineering Intern',
+                'exp1.location': 'São Paulo, Brazil | June 2025 – August 2025',
+                'exp1.b1': 'Designed OTP authentication REST API using Java and Spring Boot with secure token verification workflows',
+                'exp1.b2': 'Built real-time account balance pipeline consuming RabbitMQ events and materializing balances into PostgreSQL, saving $5K/month',
+                'exp1.b3': 'Supported full API lifecycle including testing, deployment, and monitoring',
+                'exp2.role':     'One by One NGO — Volunteer Intern',
+                'exp2.location': 'Rio de Janeiro, Brazil | 2020–2023',
+                'exp2.b1': 'Taught computer science fundamentals to underserved students',
+                'exp2.b2': 'Led project-based learning and digital literacy initiatives',
+                // Education
+                'edu.degree':     'Bachelor of Science in Computer Science and Statistics & Analytics',
+                'edu.expected':   'Expected May 2027',
+                'edu.coursework': 'Relevant Coursework',
+                'course1': 'Data Structures and Analysis',
+                'course2': 'Computer Organization',
+                'course3': 'Systems Fundamentals',
+                'course4': 'Foundations of Software Engineering',
+                'course5': 'Software Engineering Laboratory',
+                'course6': 'Models of Languages and Computation',
+                // Skills
+                'skills.title':      'Technical Skills',
+                'skills.languages':  'Languages',
+                'skills.tools':      'Tools',
+                'skills.frameworks': 'Frameworks',
+                // Leadership
+                'lead1.role1': 'Director of Event Support (Apr 2025 – Present)',
+                'lead1.b1': 'Manage logistics of mentors and volunteers for 400+ attendees',
+                'lead1.b2': 'Coordinate over 100mentors and volunteers',
+                'lead1.b3': 'Support $70K budget',
+                'lead1.role2': 'Director of Hacker Experience (Apr 2024 – Apr 2025)',
+                'lead1.b4': 'Led mentor coordination for over 30 mentors',
+                'lead1.b5': 'Delivered Hack 101 workshops',
+                'lead2.role1': 'Student Ambassador (Aug 2025 – Present)',
+                'lead2.b1': 'Support students during lab shifts',
+                'lead2.b2': 'Maintain collaborative learning environment',
+                // Interests
+                'interest1':  'Quantum computing',
+                'interest2':  'Systems architecture',
+                'interest3':  'API development',
+                'interest4':  'Game development',
+                'interest5':  'UX/UI',
+                'interest6':  'Soccer',
+                'interest7':  'Basketball',
+                'interest8':  'Volleyball',
+                'interest9':  'Fantasy literature',
+                'interest10': 'Educational psychology',
+                // Footer
+                'footer.rights': 'All rights reserved.',
+            },
+            pt: {
+                // Nav
+                'nav.about':      'Sobre',
+                'nav.projects':   'Projetos',
+                'nav.experience': 'Experiência',
+                'nav.education':  'Educação',
+                'nav.skills':     'Habilidades',
+                'nav.leadership': 'Liderança',
+                'nav.interests':  'Interesses',
+                // Hero
+                'hero.tagline': 'Ciência da Computação & Estatística @ UNC Chapel Hill construindo APIs, sistemas e produtos de software',
+                // About
+                'about.text': 'Olá! Sou estudante de Ciência da Computação e Estatística & Análise na Universidade da Carolina do Norte em Chapel Hill, com formatura prevista para maio de 2027. Tenho focado principalmente em engenharia backend, APIs, arquitetura de sistemas e fluxos de trabalho em engenharia de software, com experiência na construção de pipelines de produção e serviços backend escaláveis. Também sou membra do clube de Computação Quântica da UNC!',
+                // Projects
+                'project1.desc': 'Refatoração da plataforma web CSXL para suportar fluxos de trabalho de desenvolvimento com IA agêntica, testes de aceitação e padrões de repositório.',
+                'project1.link': 'Ver Projeto →',
+                'project2.desc': 'Aplicativo de acompanhamento de bem-estar em SwiftUI com painéis de visualização e análise de tendências históricas.',
+                'project2.link': 'Ver no GitHub →',
+                'project3.desc': 'Jogo de arcade em JavaFX com mecânicas de progressão de fases utilizando os padrões MVC, Observer e Factory.',
+                // Experience
+                'exp1.role':     'BTG Pactual — Estagiária de Engenharia de Software',
+                'exp1.location': 'São Paulo, Brasil | Junho 2025 – Agosto 2025',
+                'exp1.b1': 'Desenvolvi uma REST API de autenticação OTP em Java e Spring Boot com fluxos seguros de verificação de token',
+                'exp1.b2': 'Construí pipeline em tempo real de saldo de conta consumindo eventos do RabbitMQ e materializando os saldos no PostgreSQL, economizando RS$5K/mês',
+                'exp1.b3': 'Apoiei o ciclo de vida completo da API, incluindo testes, deploy e monitoramento',
+                'exp2.role':     'ONG One by One — Estagiária Voluntária',
+                'exp2.location': 'Rio de Janeiro, Brasil | 2020–2023',
+                'exp2.b1': 'Ensinei fundamentos de ciência da computação a estudantes em situação de vulnerabilidade',
+                'exp2.b2': 'Liderei iniciativas de aprendizado baseado em projetos e letramento digital',
+                // Education
+                'edu.degree':     'Bacharelado em Ciência da Computação e Estatística & Análise',
+                'edu.expected':   'Previsão: Maio de 2027',
+                'edu.coursework': 'Disciplinas Cursadas',
+                'course1': 'Estruturas de Dados e Análise',
+                'course2': 'Organização de Computadores',
+                'course3': 'Fundamentos de Sistemas',
+                'course4': 'Fundamentos de Engenharia de Software',
+                'course5': 'Laboratório de Engenharia de Software',
+                'course6': 'Modelos de Linguagens e Computação',
+                // Skills
+                'skills.title':      'Habilidades Técnicas',
+                'skills.languages':  'Linguagens',
+                'skills.tools':      'Ferramentas',
+                'skills.frameworks': 'Frameworks',
+                // Leadership
+                'lead1.role1': 'Diretora de Suporte a Eventos (Abr 2025 – Presente)',
+                'lead1.b1': 'Gerencio a logística de voluntários e mentores para mais de 400+ participantes',
+                'lead1.b2': 'Coordeno mais de 100 mentores e voluntários',
+                'lead1.b3': 'Apoio orçamento de US$70K',
+                'lead1.role2': 'Diretora de Experiência do Hacker (Abr 2024 – Abr 2025)',
+                'lead1.b4': 'Coordenei mais de 30 mentores',
+                'lead1.b5': 'Administrei workshops Hack 101',
+                'lead2.role1': 'Embaixadora Estudantil (Ago 2025 – Presente)',
+                'lead2.b1': 'Apoio estudantes durante os turnos no laboratório',
+                'lead2.b2': 'Mantenho um ambiente de aprendizado colaborativo',
+                // Interests
+                'interest1':  'Computação quântica',
+                'interest2':  'Arquitetura de sistemas',
+                'interest3':  'Desenvolvimento de APIs',
+                'interest4':  'Desenvolvimento de jogos',
+                'interest5':  'UX/UI',
+                'interest6':  'Futebol',
+                'interest7':  'Basquete',
+                'interest8':  'Vôlei',
+                'interest9':  'Livros de fantasia',
+                'interest10': 'Psicologia educacional',
+                // Footer
+                'footer.rights': 'Todos os direitos reservados.',
+            }
+        };
+
+        // ─── Language switcher ────────────────────────────────────────────────────────
+        let currentLang = localStorage.getItem('lang') || 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            document.title = lang === 'pt' ? 'Luisa M. Tanure - Portfólio' : 'Luisa M. Tanure - Portfolio';
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key] !== undefined) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+        });
+
+        // Apply saved or default language on load
+        setLanguage(currentLang);
+
+        // ─── Hamburger menu ───────────────────────────────────────────────────────────
         const hamburger = document.getElementById('hamburger');
-        const navbar = document.getElementById('navbar');
-        const overlay = document.getElementById('navOverlay');
+        const navbar    = document.getElementById('navbar');
+        const overlay   = document.getElementById('navOverlay');
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -265,7 +439,7 @@
             });
         });
 
-        // Individual project card toggle
+        // ─── Individual project card toggle ──────────────────────────────────────────
         document.querySelectorAll('.project-toggle').forEach(toggle => {
             toggle.addEventListener('click', () => {
                 const card = toggle.closest('.project-card');
