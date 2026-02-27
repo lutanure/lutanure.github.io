@@ -22,13 +22,13 @@
     <nav class="navbar" id="navbar">
         <a href="../index.html" class="nav-brand">LT</a>
         <ul class="nav-menu">
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#experience">Experience</a></li>
-            <li><a href="../index.html#education">Education</a></li>
-            <li><a href="../index.html#skills">Skills</a></li>
-            <li><a href="../index.html#leadership">Leadership</a></li>
-            <li><a href="../index.html#interests">Interests</a></li>
+            <li><a href="../index.html#about"      data-i18n="nav.about">About</a></li>
+            <li><a href="../index.html#projects"   data-i18n="nav.projects">Projects</a></li>
+            <li><a href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="../index.html#education"  data-i18n="nav.education">Education</a></li>
+            <li><a href="../index.html#skills"     data-i18n="nav.skills">Skills</a></li>
+            <li><a href="../index.html#leadership" data-i18n="nav.leadership">Leadership</a></li>
+            <li><a href="../index.html#interests"  data-i18n="nav.interests">Interests</a></li>
         </ul>
         <div class="lang-toggle">
             <button class="lang-btn active" data-lang="en">EN</button>
@@ -39,11 +39,11 @@
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
-            <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+            <a href="../index.html#projects" class="back-link" data-i18n="back">← Back to Projects</a>
             <h1>CSXL Agentic AI Refactor</h1>
-            <p class="project-tagline">Refactoring UNC's Computer Science Experience Labs platform to support agentic AI-driven development workflows, structured acceptance testing, and modern repository standards.</p>
+            <p class="project-tagline" data-i18n="tagline">Refactoring UNC's Computer Science Experience Labs platform to support agentic AI-driven development workflows, structured acceptance testing, and modern repository standards.</p>
             <div class="project-external-links">
-                <a href="https://tarheels.live/s26comp523teama/" target="_blank" class="btn btn-outline">View Live Project →</a>
+                <a href="https://tarheels.live/s26comp523teama/" target="_blank" class="btn btn-outline" data-i18n="live.link">View Live Project →</a>
             </div>
         </div>
     </section>
@@ -51,15 +51,15 @@
     <!-- Overview -->
     <section class="section project-section bg-light">
         <div class="container">
-            <h2>Overview</h2>
+            <h2 data-i18n="overview.h2">Overview</h2>
             <div class="project-body">
-                <p>The CSXL (Computer Science Experience Labs) platform is UNC Chapel Hill's hub for CS students — connecting them to office hours, equipment loans, study spaces, and community events. This project, completed as part of COMP 523 (Software Engineering Laboratory), involves a large-scale refactor of the existing codebase to integrate agentic AI development workflows.</p>
-                <p>The refactor introduces acceptance testing pipelines so that AI agents can be reliably used to propose and validate changes to the platform. It also brings the repository up to modern standards with improved CI/CD integration, clearer contribution guidelines, and better separation of concerns across the stack.</p>
+                <p data-i18n="overview.p1">The CSXL (Computer Science Experience Labs) platform is UNC Chapel Hill's hub for CS students — connecting them to office hours, equipment loans, study spaces, and community events. This project, completed as part of COMP 523 (Software Engineering Laboratory), involves a large-scale refactor of the existing codebase to integrate agentic AI development workflows.</p>
+                <p data-i18n="overview.p2">The refactor introduces acceptance testing pipelines so that AI agents can be reliably used to propose and validate changes to the platform. It also brings the repository up to modern standards with improved CI/CD integration, clearer contribution guidelines, and better separation of concerns across the stack.</p>
                 <ul>
-                    <li>Refactored backend service layer to support agentic AI interaction patterns</li>
-                    <li>Designed and implemented structured acceptance test suites for key user flows</li>
-                    <li>Updated repository standards: linting, branching conventions, PR templates</li>
-                    <li>Collaborated with a team of 4 engineers across a full semester sprint cycle</li>
+                    <li data-i18n="overview.li1">Refactored backend service layer to support agentic AI interaction patterns</li>
+                    <li data-i18n="overview.li2">Designed and implemented structured acceptance test suites for key user flows</li>
+                    <li data-i18n="overview.li3">Updated repository standards: linting, branching conventions, PR templates</li>
+                    <li data-i18n="overview.li4">Collaborated with a team of 4 engineers across a full semester sprint cycle</li>
                 </ul>
             </div>
         </div>
@@ -68,9 +68,9 @@
     <!-- Tech Stack -->
     <section class="section project-section bg-dark">
         <div class="container">
-            <h2>Tech Stack</h2>
+            <h2 data-i18n="techstack.h2">Tech Stack</h2>
             <div class="project-body">
-                <p>Built on the existing CSXL stack with additions to support AI-driven workflows and testing infrastructure.</p>
+                <p data-i18n="techstack.p">Built on the existing CSXL stack with additions to support AI-driven workflows and testing infrastructure.</p>
                 <div class="project-tech-grid">
                     <span class="skill-badge"><i class="devicon-python-plain"></i>Python</span>
                     <span class="skill-badge"><i class="devicon-fastapi-plain"></i>FastAPI</span>
@@ -86,7 +86,7 @@
     <!-- Motivation -->
     <section class="section project-section bg-light">
         <div class="container">
-            <h2>Motivation</h2>
+            <h2 data-i18n="motivation.h2">Motivation</h2>
             <div class="project-body">
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
@@ -97,7 +97,7 @@
     <!-- Challenges -->
     <section class="section project-section bg-dark">
         <div class="container">
-            <h2>Challenges</h2>
+            <h2 data-i18n="challenges.h2">Challenges</h2>
             <div class="project-body">
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
                 <ul>
@@ -113,11 +113,76 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Luisa M. Tanure. All rights reserved.</p>
+            <p>&copy; 2026 Luisa M. Tanure. <span data-i18n="footer.rights">All rights reserved.</span></p>
         </div>
     </footer>
 
     <script>
+        const translations = {
+            en: {
+                'nav.about':      'About',
+                'nav.projects':   'Projects',
+                'nav.experience': 'Experience',
+                'nav.education':  'Education',
+                'nav.skills':     'Skills',
+                'nav.leadership': 'Leadership',
+                'nav.interests':  'Interests',
+                'back':           '← Back to Projects',
+                'tagline':        "Refactoring UNC's Computer Science Experience Labs platform to support agentic AI-driven development workflows, structured acceptance testing, and modern repository standards.",
+                'live.link':      'View Live Project →',
+                'overview.h2':    'Overview',
+                'overview.p1':    "The CSXL (Computer Science Experience Labs) platform is UNC Chapel Hill's hub for CS students — connecting them to office hours, equipment loans, study spaces, and community events. This project, completed as part of COMP 523 (Software Engineering Laboratory), involves a large-scale refactor of the existing codebase to integrate agentic AI development workflows.",
+                'overview.p2':    'The refactor introduces acceptance testing pipelines so that AI agents can be reliably used to propose and validate changes to the platform. It also brings the repository up to modern standards with improved CI/CD integration, clearer contribution guidelines, and better separation of concerns across the stack.',
+                'overview.li1':   'Refactored backend service layer to support agentic AI interaction patterns',
+                'overview.li2':   'Designed and implemented structured acceptance test suites for key user flows',
+                'overview.li3':   'Updated repository standards: linting, branching conventions, PR templates',
+                'overview.li4':   'Collaborated with a team of 4 engineers across a full semester sprint cycle',
+                'techstack.h2':   'Tech Stack',
+                'techstack.p':    'Built on the existing CSXL stack with additions to support AI-driven workflows and testing infrastructure.',
+                'motivation.h2':  'Motivation',
+                'challenges.h2':  'Challenges',
+                'footer.rights':  'All rights reserved.',
+            },
+            pt: {
+                'nav.about':      'Sobre',
+                'nav.projects':   'Projetos Recentes',
+                'nav.experience': 'Experiência',
+                'nav.education':  'Educação',
+                'nav.skills':     'Habilidades',
+                'nav.leadership': 'Liderança',
+                'nav.interests':  'Interesses',
+                'back':           '← Voltar para Projetos',
+                'tagline':        'Refatoração da plataforma do UNC Computer Science Experience Labs para suportar fluxos de trabalho de desenvolvimento com IA agêntica, testes de aceitação estruturados e padrões modernos de repositório.',
+                'live.link':      'Ver Projeto ao Vivo →',
+                'overview.h2':    'Visão Geral',
+                'overview.p1':    'A plataforma CSXL (Computer Science Experience Labs) é o hub de CS da UNC Chapel Hill — conectando estudantes a atendimentos, empréstimos de equipamentos, espaços de estudo e eventos. Este projeto, desenvolvido como parte do COMP 523 (Laboratório de Engenharia de Software), envolve uma grande refatoração do código existente para integrar fluxos de desenvolvimento com IA agêntica.',
+                'overview.p2':    'A refatoração introduz pipelines de testes de aceitação para que agentes de IA possam propor e validar mudanças na plataforma de forma confiável. Também moderniza o repositório com melhor integração de CI/CD, diretrizes de contribuição mais claras e melhor separação de responsabilidades em toda a stack.',
+                'overview.li1':   'Refatoração da camada de serviços backend para suportar padrões de interação com IA agêntica',
+                'overview.li2':   'Design e implementação de suítes de testes de aceitação estruturados para fluxos principais',
+                'overview.li3':   'Atualização dos padrões do repositório: linting, convenções de branch, templates de PR',
+                'overview.li4':   'Colaboração com equipe de 4 engenheiros ao longo de um ciclo de sprint semestral',
+                'techstack.h2':   'Tecnologias Utilizadas',
+                'techstack.p':    'Desenvolvido sobre a stack existente do CSXL com adições para suportar fluxos com IA e infraestrutura de testes.',
+                'motivation.h2':  'Motivação',
+                'challenges.h2':  'Desafios',
+                'footer.rights':  'Todos os direitos reservados.',
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key] !== undefined) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navbar    = document.getElementById('navbar');
@@ -143,17 +208,12 @@
             });
         });
 
-        // Language toggle (syncs with main site preference)
-        const savedLang = localStorage.getItem('lang') || 'en';
         document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === savedLang);
-            btn.addEventListener('click', () => {
-                localStorage.setItem('lang', btn.dataset.lang);
-                document.querySelectorAll('.lang-btn').forEach(b =>
-                    b.classList.toggle('active', b.dataset.lang === btn.dataset.lang)
-                );
-            });
+            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
         });
+
+        // Apply saved language on load
+        setLanguage(localStorage.getItem('lang') || 'en');
     </script>
 </body>
 </html>

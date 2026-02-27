@@ -22,13 +22,13 @@
     <nav class="navbar" id="navbar">
         <a href="../index.html" class="nav-brand">LT</a>
         <ul class="nav-menu">
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#experience">Experience</a></li>
-            <li><a href="../index.html#education">Education</a></li>
-            <li><a href="../index.html#skills">Skills</a></li>
-            <li><a href="../index.html#leadership">Leadership</a></li>
-            <li><a href="../index.html#interests">Interests</a></li>
+            <li><a href="../index.html#about"      data-i18n="nav.about">About</a></li>
+            <li><a href="../index.html#projects"   data-i18n="nav.projects">Projects</a></li>
+            <li><a href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="../index.html#education"  data-i18n="nav.education">Education</a></li>
+            <li><a href="../index.html#skills"     data-i18n="nav.skills">Skills</a></li>
+            <li><a href="../index.html#leadership" data-i18n="nav.leadership">Leadership</a></li>
+            <li><a href="../index.html#interests"  data-i18n="nav.interests">Interests</a></li>
         </ul>
         <div class="lang-toggle">
             <button class="lang-btn active" data-lang="en">EN</button>
@@ -39,11 +39,11 @@
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
-            <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+            <a href="../index.html#projects" class="back-link" data-i18n="back">← Back to Projects</a>
             <h1>dotTrack</h1>
-            <p class="project-tagline">A SwiftUI wellness tracking application with interactive visualization dashboards and historical trend analysis to help users understand their habits over time.</p>
+            <p class="project-tagline" data-i18n="tagline">A SwiftUI wellness tracking application with interactive visualization dashboards and historical trend analysis to help users understand their habits over time.</p>
             <div class="project-external-links">
-                <a href="https://github.com/lutanure/dotTrack" target="_blank" class="btn btn-outline">View on GitHub →</a>
+                <a href="https://github.com/lutanure/dotTrack" target="_blank" class="btn btn-outline" data-i18n="github.link">View on GitHub →</a>
             </div>
         </div>
     </section>
@@ -51,15 +51,15 @@
     <!-- Overview -->
     <section class="section project-section bg-light">
         <div class="container">
-            <h2>Overview</h2>
+            <h2 data-i18n="overview.h2">Overview</h2>
             <div class="project-body">
-                <p>dotTrack is an iOS wellness tracking app built with SwiftUI. It lets users log daily habits and wellness metrics, then surfaces that data through clean visualization dashboards — bar charts, streaks, and historical trend lines — so patterns become easy to spot at a glance.</p>
-                <p>The app was designed with a minimal, dot-grid-inspired aesthetic (hence the name) and focuses on making data entry as frictionless as possible, so users actually stick with logging.</p>
+                <p data-i18n="overview.p1">dotTrack is an iOS wellness tracking app built with SwiftUI. It lets users log daily habits and wellness metrics, then surfaces that data through clean visualization dashboards — bar charts, streaks, and historical trend lines — so patterns become easy to spot at a glance.</p>
+                <p data-i18n="overview.p2">The app was designed with a minimal, dot-grid-inspired aesthetic (hence the name) and focuses on making data entry as frictionless as possible, so users actually stick with logging.</p>
                 <ul>
-                    <li>Custom SwiftUI views for habit logging and daily check-ins</li>
-                    <li>Visualization dashboards using Swift Charts for trend analysis</li>
-                    <li>Persistent local storage via Core Data</li>
-                    <li>Streak tracking and summary statistics per metric</li>
+                    <li data-i18n="overview.li1">Custom SwiftUI views for habit logging and daily check-ins</li>
+                    <li data-i18n="overview.li2">Visualization dashboards using Swift Charts for trend analysis</li>
+                    <li data-i18n="overview.li3">Persistent local storage via Core Data</li>
+                    <li data-i18n="overview.li4">Streak tracking and summary statistics per metric</li>
                 </ul>
             </div>
         </div>
@@ -68,9 +68,9 @@
     <!-- Tech Stack -->
     <section class="section project-section bg-dark">
         <div class="container">
-            <h2>Tech Stack</h2>
+            <h2 data-i18n="techstack.h2">Tech Stack</h2>
             <div class="project-body">
-                <p>Built natively for iOS using Apple's modern declarative UI framework.</p>
+                <p data-i18n="techstack.p">Built natively for iOS using Apple's modern declarative UI framework.</p>
                 <div class="project-tech-grid">
                     <span class="skill-badge"><i class="devicon-swift-plain"></i>SwiftUI</span>
                     <span class="skill-badge"><i class="devicon-xcode-plain"></i>Xcode</span>
@@ -84,7 +84,7 @@
     <!-- Motivation -->
     <section class="section project-section bg-light">
         <div class="container">
-            <h2>Motivation</h2>
+            <h2 data-i18n="motivation.h2">Motivation</h2>
             <div class="project-body">
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
@@ -95,7 +95,7 @@
     <!-- Challenges -->
     <section class="section project-section bg-dark">
         <div class="container">
-            <h2>Challenges</h2>
+            <h2 data-i18n="challenges.h2">Challenges</h2>
             <div class="project-body">
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
                 <ul>
@@ -111,11 +111,76 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Luisa M. Tanure. All rights reserved.</p>
+            <p>&copy; 2026 Luisa M. Tanure. <span data-i18n="footer.rights">All rights reserved.</span></p>
         </div>
     </footer>
 
     <script>
+        const translations = {
+            en: {
+                'nav.about':      'About',
+                'nav.projects':   'Projects',
+                'nav.experience': 'Experience',
+                'nav.education':  'Education',
+                'nav.skills':     'Skills',
+                'nav.leadership': 'Leadership',
+                'nav.interests':  'Interests',
+                'back':           '← Back to Projects',
+                'tagline':        'A SwiftUI wellness tracking application with interactive visualization dashboards and historical trend analysis to help users understand their habits over time.',
+                'github.link':    'View on GitHub →',
+                'overview.h2':    'Overview',
+                'overview.p1':    'dotTrack is an iOS wellness tracking app built with SwiftUI. It lets users log daily habits and wellness metrics, then surfaces that data through clean visualization dashboards — bar charts, streaks, and historical trend lines — so patterns become easy to spot at a glance.',
+                'overview.p2':    'The app was designed with a minimal, dot-grid-inspired aesthetic (hence the name) and focuses on making data entry as frictionless as possible, so users actually stick with logging.',
+                'overview.li1':   'Custom SwiftUI views for habit logging and daily check-ins',
+                'overview.li2':   'Visualization dashboards using Swift Charts for trend analysis',
+                'overview.li3':   'Persistent local storage via Core Data',
+                'overview.li4':   'Streak tracking and summary statistics per metric',
+                'techstack.h2':   'Tech Stack',
+                'techstack.p':    "Built natively for iOS using Apple's modern declarative UI framework.",
+                'motivation.h2':  'Motivation',
+                'challenges.h2':  'Challenges',
+                'footer.rights':  'All rights reserved.',
+            },
+            pt: {
+                'nav.about':      'Sobre',
+                'nav.projects':   'Projetos Recentes',
+                'nav.experience': 'Experiência',
+                'nav.education':  'Educação',
+                'nav.skills':     'Habilidades',
+                'nav.leadership': 'Liderança',
+                'nav.interests':  'Interesses',
+                'back':           '← Voltar para Projetos',
+                'tagline':        'Um aplicativo de acompanhamento de bem-estar em SwiftUI com painéis de visualização interativos e análise de tendências históricas para ajudar usuários a entender seus hábitos ao longo do tempo.',
+                'github.link':    'Ver no GitHub →',
+                'overview.h2':    'Visão Geral',
+                'overview.p1':    'dotTrack é um app de bem-estar para iOS desenvolvido com SwiftUI. Ele permite que usuários registrem hábitos e métricas diárias, exibindo os dados em painéis de visualização — gráficos de barras, sequências e linhas de tendência históricas — para que padrões sejam facilmente identificados.',
+                'overview.p2':    'O app foi projetado com uma estética minimalista inspirada em grade de pontos (daí o nome) e foca em tornar o registro de dados o mais simples possível, para que os usuários continuem usando.',
+                'overview.li1':   'Views personalizadas em SwiftUI para registro de hábitos e check-ins diários',
+                'overview.li2':   'Painéis de visualização com Swift Charts para análise de tendências',
+                'overview.li3':   'Armazenamento local persistente via Core Data',
+                'overview.li4':   'Acompanhamento de sequências e estatísticas resumidas por métrica',
+                'techstack.h2':   'Tecnologias Utilizadas',
+                'techstack.p':    'Desenvolvido nativamente para iOS usando o moderno framework de UI declarativa da Apple.',
+                'motivation.h2':  'Motivação',
+                'challenges.h2':  'Desafios',
+                'footer.rights':  'Todos os direitos reservados.',
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key] !== undefined) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navbar    = document.getElementById('navbar');
@@ -141,17 +206,12 @@
             });
         });
 
-        // Language toggle (syncs with main site preference)
-        const savedLang = localStorage.getItem('lang') || 'en';
         document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === savedLang);
-            btn.addEventListener('click', () => {
-                localStorage.setItem('lang', btn.dataset.lang);
-                document.querySelectorAll('.lang-btn').forEach(b =>
-                    b.classList.toggle('active', b.dataset.lang === btn.dataset.lang)
-                );
-            });
+            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
         });
+
+        // Apply saved language on load
+        setLanguage(localStorage.getItem('lang') || 'en');
     </script>
 </body>
 </html>

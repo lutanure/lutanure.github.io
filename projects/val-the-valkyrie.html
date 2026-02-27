@@ -22,13 +22,13 @@
     <nav class="navbar" id="navbar">
         <a href="../index.html" class="nav-brand">LT</a>
         <ul class="nav-menu">
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#experience">Experience</a></li>
-            <li><a href="../index.html#education">Education</a></li>
-            <li><a href="../index.html#skills">Skills</a></li>
-            <li><a href="../index.html#leadership">Leadership</a></li>
-            <li><a href="../index.html#interests">Interests</a></li>
+            <li><a href="../index.html#about"      data-i18n="nav.about">About</a></li>
+            <li><a href="../index.html#projects"   data-i18n="nav.projects">Projects</a></li>
+            <li><a href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="../index.html#education"  data-i18n="nav.education">Education</a></li>
+            <li><a href="../index.html#skills"     data-i18n="nav.skills">Skills</a></li>
+            <li><a href="../index.html#leadership" data-i18n="nav.leadership">Leadership</a></li>
+            <li><a href="../index.html#interests"  data-i18n="nav.interests">Interests</a></li>
         </ul>
         <div class="lang-toggle">
             <button class="lang-btn active" data-lang="en">EN</button>
@@ -39,25 +39,25 @@
     <!-- Project Hero -->
     <section class="project-hero">
         <div class="container">
-            <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+            <a href="../index.html#projects" class="back-link" data-i18n="back">← Back to Projects</a>
             <h1>Val the Valkyrie</h1>
-            <p class="project-tagline">An arcade-style JavaFX game featuring a Norse warrior navigating levels, defeating enemies, and collecting power-ups — built with MVC, Observer, and Factory design patterns.</p>
+            <p class="project-tagline" data-i18n="tagline">An arcade-style JavaFX game featuring a Norse warrior navigating levels, defeating enemies, and collecting power-ups — built with MVC, Observer, and Factory design patterns.</p>
         </div>
     </section>
 
     <!-- Overview -->
     <section class="section project-section bg-light">
         <div class="container">
-            <h2>Overview</h2>
+            <h2 data-i18n="overview.h2">Overview</h2>
             <div class="project-body">
-                <p>Val the Valkyrie is an arcade-style 2D game built with JavaFX. Players control Val, a Norse warrior, across multiple levels with increasing difficulty. Each level introduces new enemy types, environmental hazards, and collectibles, with a progression system that rewards exploration and combat skill.</p>
-                <p>The game was built as a software engineering exercise with a strong emphasis on design patterns. Clean separation of concerns — game logic, UI rendering, and state management — makes the codebase easy to extend and test.</p>
+                <p data-i18n="overview.p1">Val the Valkyrie is an arcade-style 2D game built with JavaFX. Players control Val, a Norse warrior, across multiple levels with increasing difficulty. Each level introduces new enemy types, environmental hazards, and collectibles, with a progression system that rewards exploration and combat skill.</p>
+                <p data-i18n="overview.p2">The game was built as a software engineering exercise with a strong emphasis on design patterns. Clean separation of concerns — game logic, UI rendering, and state management — makes the codebase easy to extend and test.</p>
                 <ul>
-                    <li>MVC architecture separating game state, rendering, and input handling</li>
-                    <li>Observer pattern for event-driven game loop updates (enemy defeat, level completion)</li>
-                    <li>Factory pattern for spawning enemies and power-ups per level configuration</li>
-                    <li>Multiple levels with progressive difficulty scaling</li>
-                    <li>Custom sprite animations and collision detection</li>
+                    <li data-i18n="overview.li1">MVC architecture separating game state, rendering, and input handling</li>
+                    <li data-i18n="overview.li2">Observer pattern for event-driven game loop updates (enemy defeat, level completion)</li>
+                    <li data-i18n="overview.li3">Factory pattern for spawning enemies and power-ups per level configuration</li>
+                    <li data-i18n="overview.li4">Multiple levels with progressive difficulty scaling</li>
+                    <li data-i18n="overview.li5">Custom sprite animations and collision detection</li>
                 </ul>
             </div>
         </div>
@@ -66,9 +66,9 @@
     <!-- Tech Stack -->
     <section class="section project-section bg-dark">
         <div class="container">
-            <h2>Tech Stack</h2>
+            <h2 data-i18n="techstack.h2">Tech Stack</h2>
             <div class="project-body">
-                <p>Built entirely in Java using the JavaFX framework for rendering and event handling.</p>
+                <p data-i18n="techstack.p">Built entirely in Java using the JavaFX framework for rendering and event handling.</p>
                 <div class="project-tech-grid">
                     <span class="skill-badge"><i class="devicon-java-plain"></i>Java</span>
                     <span class="skill-badge"><i class="devicon-git-plain"></i>Git</span>
@@ -80,7 +80,7 @@
     <!-- Motivation -->
     <section class="section project-section bg-light">
         <div class="container">
-            <h2>Motivation</h2>
+            <h2 data-i18n="motivation.h2">Motivation</h2>
             <div class="project-body">
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
@@ -91,7 +91,7 @@
     <!-- Challenges -->
     <section class="section project-section bg-dark">
         <div class="container">
-            <h2>Challenges</h2>
+            <h2 data-i18n="challenges.h2">Challenges</h2>
             <div class="project-body">
                 <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
                 <ul>
@@ -107,11 +107,76 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Luisa M. Tanure. All rights reserved.</p>
+            <p>&copy; 2026 Luisa M. Tanure. <span data-i18n="footer.rights">All rights reserved.</span></p>
         </div>
     </footer>
 
     <script>
+        const translations = {
+            en: {
+                'nav.about':      'About',
+                'nav.projects':   'Projects',
+                'nav.experience': 'Experience',
+                'nav.education':  'Education',
+                'nav.skills':     'Skills',
+                'nav.leadership': 'Leadership',
+                'nav.interests':  'Interests',
+                'back':           '← Back to Projects',
+                'tagline':        'An arcade-style JavaFX game featuring a Norse warrior navigating levels, defeating enemies, and collecting power-ups — built with MVC, Observer, and Factory design patterns.',
+                'overview.h2':    'Overview',
+                'overview.p1':    'Val the Valkyrie is an arcade-style 2D game built with JavaFX. Players control Val, a Norse warrior, across multiple levels with increasing difficulty. Each level introduces new enemy types, environmental hazards, and collectibles, with a progression system that rewards exploration and combat skill.',
+                'overview.p2':    'The game was built as a software engineering exercise with a strong emphasis on design patterns. Clean separation of concerns — game logic, UI rendering, and state management — makes the codebase easy to extend and test.',
+                'overview.li1':   'MVC architecture separating game state, rendering, and input handling',
+                'overview.li2':   'Observer pattern for event-driven game loop updates (enemy defeat, level completion)',
+                'overview.li3':   'Factory pattern for spawning enemies and power-ups per level configuration',
+                'overview.li4':   'Multiple levels with progressive difficulty scaling',
+                'overview.li5':   'Custom sprite animations and collision detection',
+                'techstack.h2':   'Tech Stack',
+                'techstack.p':    'Built entirely in Java using the JavaFX framework for rendering and event handling.',
+                'motivation.h2':  'Motivation',
+                'challenges.h2':  'Challenges',
+                'footer.rights':  'All rights reserved.',
+            },
+            pt: {
+                'nav.about':      'Sobre',
+                'nav.projects':   'Projetos Recentes',
+                'nav.experience': 'Experiência',
+                'nav.education':  'Educação',
+                'nav.skills':     'Habilidades',
+                'nav.leadership': 'Liderança',
+                'nav.interests':  'Interesses',
+                'back':           '← Voltar para Projetos',
+                'tagline':        'Um jogo de arcade em JavaFX com uma guerreira nórdica navegando por fases, derrotando inimigos e coletando power-ups — desenvolvido com os padrões MVC, Observer e Factory.',
+                'overview.h2':    'Visão Geral',
+                'overview.p1':    'Val the Valkyrie é um jogo 2D de arcade desenvolvido com JavaFX. Os jogadores controlam Val, uma guerreira nórdica, por múltiplas fases com dificuldade crescente. Cada fase apresenta novos tipos de inimigos, obstáculos e coletáveis, com um sistema de progressão que recompensa exploração e habilidade de combate.',
+                'overview.p2':    'O jogo foi desenvolvido como exercício de engenharia de software com forte ênfase em padrões de projeto. A clara separação de responsabilidades — lógica do jogo, renderização de UI e gerenciamento de estado — torna o código fácil de estender e testar.',
+                'overview.li1':   'Arquitetura MVC separando estado do jogo, renderização e tratamento de entrada',
+                'overview.li2':   'Padrão Observer para atualizações do loop de jogo orientadas a eventos (derrota de inimigos, conclusão de fase)',
+                'overview.li3':   'Padrão Factory para spawn de inimigos e power-ups por configuração de fase',
+                'overview.li4':   'Múltiplas fases com escalonamento progressivo de dificuldade',
+                'overview.li5':   'Animações de sprite personalizadas e detecção de colisão',
+                'techstack.h2':   'Tecnologias Utilizadas',
+                'techstack.p':    'Desenvolvido inteiramente em Java usando o framework JavaFX para renderização e tratamento de eventos.',
+                'motivation.h2':  'Motivação',
+                'challenges.h2':  'Desafios',
+                'footer.rights':  'Todos os direitos reservados.',
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key] !== undefined) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navbar    = document.getElementById('navbar');
@@ -137,17 +202,12 @@
             });
         });
 
-        // Language toggle (syncs with main site preference)
-        const savedLang = localStorage.getItem('lang') || 'en';
         document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === savedLang);
-            btn.addEventListener('click', () => {
-                localStorage.setItem('lang', btn.dataset.lang);
-                document.querySelectorAll('.lang-btn').forEach(b =>
-                    b.classList.toggle('active', b.dataset.lang === btn.dataset.lang)
-                );
-            });
+            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
         });
+
+        // Apply saved language on load
+        setLanguage(localStorage.getItem('lang') || 'en');
     </script>
 </body>
 </html>
