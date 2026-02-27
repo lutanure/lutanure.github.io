@@ -130,7 +130,7 @@ p {
 
 /* Hero Section */
 .hero {
-    background: #e8f0ec;
+    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
     padding: 6rem 2rem;
     text-align: center;
     border-bottom: 3px solid #1f4228;
@@ -272,7 +272,7 @@ p {
 
 /* Experience Section */
 #experience {
-    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
+    background: linear-gradient(135deg, #f5faf8 0%, #fff 100%);
 }
 
 .experience-item {
@@ -318,7 +318,7 @@ p {
 
 /* Education Section */
 #education {
-    background-color: #fff;
+    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
 }
 
 .education-item h3 {
@@ -368,7 +368,7 @@ p {
 
 /* Skills Section */
 #skills {
-    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
+    background: linear-gradient(135deg, #f5faf8 0%, #fff 100%);
 }
 
 .skills-container {
@@ -409,7 +409,7 @@ p {
 
 /* Leadership Section */
 #leadership {
-    background-color: #fff;
+    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
 }
 
 .leadership-item {
@@ -453,7 +453,7 @@ p {
 
 /* Interests Section */
 #interests {
-    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
+    background: linear-gradient(135deg, #f5faf8 0%, #fff 100%);
 }
 
 .interests-list {
