@@ -301,7 +301,6 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    align-items: start;
 }
 
 .project-card {
@@ -311,6 +310,8 @@ p {
     border-left: 4px solid #2d5f3f;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 8px rgba(45, 95, 63, 0.08);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -318,34 +319,51 @@ p {
     box-shadow: 0 8px 16px rgba(45, 95, 63, 0.15);
 }
 
-.project-toggle {
-    width: 100%;
-    background: none;
-    border: none;
-    cursor: pointer;
+.project-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0;
-    text-align: left;
 }
 
-.project-toggle h3 {
+.project-title-link {
+    text-decoration: none;
+    flex: 1;
+}
+
+.project-title-link h3 {
     color: #2d5f3f;
     margin-bottom: 0;
     transition: color 0.3s ease;
 }
 
-.project-toggle:hover h3 {
+.project-title-link:hover h3 {
     color: #1f4228;
+    text-decoration: underline;
+    text-decoration-color: #1f4228;
+}
+
+.project-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0.35rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.project-toggle:hover {
+    background-color: rgba(45, 95, 63, 0.08);
 }
 
 .toggle-icon {
     color: #2d5f3f;
     font-size: 0.7rem;
     transition: transform 0.3s ease;
-    flex-shrink: 0;
+    display: block;
 }
 
 .project-card.expanded .toggle-icon {
@@ -357,16 +375,27 @@ p {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #e0e8e4;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-card.expanded .project-details {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-details p {
     color: #666;
     font-size: 0.95rem;
     margin-bottom: 1rem;
+}
+
+.project-card-footer {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 0.5rem;
 }
 
 .project-link {
@@ -382,6 +411,96 @@ p {
 .project-link:hover {
     border-bottom-color: #2d5f3f;
     padding-left: 0.25rem;
+}
+
+/* Project Detail Pages */
+.project-hero {
+    background: linear-gradient(135deg, #b9d7c8 0%, #f0f5f3 100%);
+    padding: 5rem 2rem 3.5rem;
+    border-bottom: 3px solid #1f4228;
+}
+
+.back-link {
+    display: inline-block;
+    color: #2d5f3f;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #1f4228;
+    text-decoration: underline;
+}
+
+.project-hero h1 {
+    color: #2d5f3f;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-tagline {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 1.75rem;
+    max-width: 700px;
+}
+
+.project-external-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-section {
+    padding: 4rem 2rem;
+}
+
+.project-section.bg-light {
+    background: linear-gradient(135deg, #f5faf8 0%, #fff 100%);
+}
+
+.project-section.bg-dark {
+    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
+}
+
+.project-body {
+    max-width: 800px;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.project-body p {
+    margin-bottom: 1.25rem;
+}
+
+.project-body ul {
+    list-style: none;
+    margin: 1rem 0 1.25rem;
+}
+
+.project-body ul li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+    color: #555;
+}
+
+.project-body ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #2d5f3f;
+    font-weight: bold;
+}
+
+.project-tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 /* Experience Section */

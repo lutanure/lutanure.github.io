@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dotTrack — Luisa M. Tanure</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- Nav Overlay (mobile) -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hamburger Button (mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="nav-brand">LT</a>
+        <ul class="nav-menu">
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#education">Education</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#leadership">Leadership</a></li>
+            <li><a href="../index.html#interests">Interests</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+            <h1>dotTrack</h1>
+            <p class="project-tagline">A SwiftUI wellness tracking application with interactive visualization dashboards and historical trend analysis to help users understand their habits over time.</p>
+            <div class="project-external-links">
+                <a href="https://github.com/lutanure/dotTrack" target="_blank" class="btn btn-outline">View on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section project-section bg-light">
+        <div class="container">
+            <h2>Overview</h2>
+            <div class="project-body">
+                <p>dotTrack is an iOS wellness tracking app built with SwiftUI. It lets users log daily habits and wellness metrics, then surfaces that data through clean visualization dashboards — bar charts, streaks, and historical trend lines — so patterns become easy to spot at a glance.</p>
+                <p>The app was designed with a minimal, dot-grid-inspired aesthetic (hence the name) and focuses on making data entry as frictionless as possible, so users actually stick with logging.</p>
+                <ul>
+                    <li>Custom SwiftUI views for habit logging and daily check-ins</li>
+                    <li>Visualization dashboards using Swift Charts for trend analysis</li>
+                    <li>Persistent local storage via Core Data</li>
+                    <li>Streak tracking and summary statistics per metric</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section project-section bg-dark">
+        <div class="container">
+            <h2>Tech Stack</h2>
+            <div class="project-body">
+                <p>Built natively for iOS using Apple's modern declarative UI framework.</p>
+                <div class="project-tech-grid">
+                    <span class="skill-badge"><i class="devicon-swift-plain"></i>SwiftUI</span>
+                    <span class="skill-badge"><i class="devicon-xcode-plain"></i>Xcode</span>
+                    <span class="skill-badge"><i class="devicon-apple-original"></i>Core Data</span>
+                    <span class="skill-badge"><i class="devicon-git-plain"></i>Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation -->
+    <section class="section project-section bg-light">
+        <div class="container">
+            <h2>Motivation</h2>
+            <div class="project-body">
+                <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+                <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="section project-section bg-dark">
+        <div class="container">
+            <h2>Challenges</h2>
+            <div class="project-body">
+                <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+                <ul>
+                    <li>The quick brown fox jumps over the lazy dog.</li>
+                    <li>The quick brown fox jumps over the lazy dog.</li>
+                    <li>The quick brown fox jumps over the lazy dog.</li>
+                </ul>
+                <p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Luisa M. Tanure. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navbar    = document.getElementById('navbar');
+        const overlay   = document.getElementById('navOverlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navbar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navbar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navbar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+        });
+
+        // Language toggle (syncs with main site preference)
+        const savedLang = localStorage.getItem('lang') || 'en';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === savedLang);
+            btn.addEventListener('click', () => {
+                localStorage.setItem('lang', btn.dataset.lang);
+                document.querySelectorAll('.lang-btn').forEach(b =>
+                    b.classList.toggle('active', b.dataset.lang === btn.dataset.lang)
+                );
+            });
+        });
+    </script>
+</body>
+</html>
