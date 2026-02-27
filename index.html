@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luisa M. Tanure - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
+    <!-- Nav Overlay (mobile) -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hamburger Button (mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <a href="#home" class="nav-brand">LT</a>
         <ul class="nav-menu">
             <li><a href="#about">About</a></li>
@@ -47,26 +58,35 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <details class="project-card">
-                    <summary><h3>CSXL Agentic AI Refactor</h3></summary>
+                <div class="project-card">
+                    <button class="project-toggle" aria-expanded="false">
+                        <h3>CSXL Agentic AI Refactor</h3>
+                        <span class="toggle-icon">▼</span>
+                    </button>
                     <div class="project-details">
                         <p>Refactoring CSXL web platform to support agentic AI development workflows, acceptance testing, and repository standards.</p>
                         <a href="https://tarheels.live/s26comp523teama/" target="_blank" class="project-link">View Project →</a>
                     </div>
-                </details>
-                <details class="project-card">
-                    <summary><h3>dotTrack</h3></summary>
+                </div>
+                <div class="project-card">
+                    <button class="project-toggle" aria-expanded="false">
+                        <h3>dotTrack</h3>
+                        <span class="toggle-icon">▼</span>
+                    </button>
                     <div class="project-details">
                         <p>SwiftUI wellness tracking application featuring visualization dashboards and historical trend analysis.</p>
                         <a href="https://github.com/lutanure/dotTrack" target="_blank" class="project-link">View on GitHub →</a>
                     </div>
-                </details>
-                <details class="project-card">
-                    <summary><h3>Val the Valkyrie</h3></summary>
+                </div>
+                <div class="project-card">
+                    <button class="project-toggle" aria-expanded="false">
+                        <h3>Val the Valkyrie</h3>
+                        <span class="toggle-icon">▼</span>
+                    </button>
                     <div class="project-details">
                         <p>Arcade-style JavaFX game with level progression mechanics using MVC, Observer, and Factory patterns.</p>
                     </div>
-                </details>
+                </div>
             </div>
         </div>
     </section>
@@ -107,7 +127,7 @@
                 <h3>University of North Carolina at Chapel Hill</h3>
                 <p class="degree">Bachelor of Science in Computer Science and Statistics & Analytics</p>
                 <p class="expected">Expected May 2027</p>
-                
+
                 <h4>Relevant Coursework</h4>
                 <div class="coursework-list">
                     <span class="course-badge">Data Structures and Analysis</span>
@@ -129,29 +149,29 @@
                 <div class="skill-category">
                     <h3>Languages</h3>
                     <div class="skill-buttons">
-                        <span class="skill-badge">Java</span>
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">C</span>
-                        <span class="skill-badge">C++</span>
-                        <span class="skill-badge">SQL</span>
-                        <span class="skill-badge">SwiftUI</span>
+                        <span class="skill-badge"><i class="devicon-java-plain"></i>Java</span>
+                        <span class="skill-badge"><i class="devicon-python-plain"></i>Python</span>
+                        <span class="skill-badge"><i class="devicon-c-plain"></i>C</span>
+                        <span class="skill-badge"><i class="devicon-cplusplus-plain"></i>C++</span>
+                        <span class="skill-badge"><i class="devicon-postgresql-plain"></i>SQL</span>
+                        <span class="skill-badge"><i class="devicon-swift-plain"></i>SwiftUI</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Tools</h3>
                     <div class="skill-buttons">
-                        <span class="skill-badge">Git</span>
-                        <span class="skill-badge">Jenkins</span>
-                        <span class="skill-badge">Postman</span>
-                        <span class="skill-badge">AWS Athena</span>
-                        <span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge"><i class="devicon-git-plain"></i>Git</span>
+                        <span class="skill-badge"><i class="devicon-jenkins-plain"></i>Jenkins</span>
+                        <span class="skill-badge"><i class="devicon-postman-plain"></i>Postman</span>
+                        <span class="skill-badge"><i class="devicon-amazonwebservices-plain"></i>AWS Athena</span>
+                        <span class="skill-badge"><i class="devicon-kubernetes-plain"></i>Kubernetes</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Frameworks</h3>
                     <div class="skill-buttons">
-                        <span class="skill-badge">Spring Boot</span>
-                        <span class="skill-badge">FastAPI</span>
+                        <span class="skill-badge"><i class="devicon-spring-plain"></i>Spring Boot</span>
+                        <span class="skill-badge"><i class="devicon-fastapi-plain"></i>FastAPI</span>
                     </div>
                 </div>
             </div>
@@ -218,5 +238,41 @@
             <p>&copy; 2026 Luisa M. Tanure. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+        const overlay = document.getElementById('navOverlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navbar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navbar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navbar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+        });
+
+        // Individual project card toggle
+        document.querySelectorAll('.project-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const card = toggle.closest('.project-card');
+                const isExpanded = card.classList.toggle('expanded');
+                toggle.setAttribute('aria-expanded', isExpanded);
+            });
+        });
+    </script>
 </body>
 </html>
