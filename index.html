@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luisa M. Tanure - Portfolio</title>
+    <title>Luisa Tanure - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
@@ -39,12 +39,13 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Luisa M. Tanure</h1>
+            <h1>Luisa Tanure</h1>
             <p class="tagline" data-i18n="hero.tagline">Computer Science &amp; Statistics @ UNC Chapel Hill building APIs, systems, and software products</p>
             <div class="contact-links">
                 <a href="mailto:luisa.mtanure@gmail.com" class="btn btn-outline">Email</a>
                 <a href="https://github.com/lutanure" target="_blank" class="btn btn-outline">GitHub</a>
                 <a href="https://linkedin.com/in/luisa-tanure" target="_blank" class="btn btn-outline">LinkedIn</a>
+                <a href="resume.pdf" target="_blank" class="btn btn-resume" data-i18n="hero.resume">Get Resume</a>
             </div>
         </div>
     </section>
@@ -155,12 +156,12 @@
 
                 <h4 data-i18n="edu.coursework">Relevant Coursework</h4>
                 <div class="coursework-list">
-                    <span class="course-badge" data-i18n="course1">Data Structures and Analysis</span>
-                    <span class="course-badge" data-i18n="course2">Computer Organization</span>
-                    <span class="course-badge" data-i18n="course3">Systems Fundamentals</span>
-                    <span class="course-badge" data-i18n="course4">Foundations of Software Engineering</span>
-                    <span class="course-badge" data-i18n="course5">Software Engineering Laboratory</span>
-                    <span class="course-badge" data-i18n="course6">Models of Languages and Computation</span>
+                    <span class="course-badge" data-i18n="course1" data-tooltip="COMP 410 — Analysis of data structures and their associated algorithms. Covers abstract data types, lists, stacks, queues, trees, graphs, sorting, searching, and hashing.">Data Structures and Analysis</span>
+                    <span class="course-badge" data-i18n="course2" data-tooltip="COMP 411 — Digital logic, circuit components, data representation, computer architecture, and assembly language programming.">Computer Organization</span>
+                    <span class="course-badge" data-i18n="course3" data-tooltip="COMP 211 — Introduction to computing systems from the programmer's perspective: binary values, digital logic, architecture, assembly programming, memory hierarchy, and C.">Systems Fundamentals</span>
+                    <span class="course-badge" data-i18n="course4" data-tooltip="COMP 301 — Principles and practices of software engineering, including object-oriented design, abstraction, modularity, and testing methodologies.">Foundations of Software Engineering</span>
+                    <span class="course-badge" data-i18n="course5" data-tooltip="COMP 523 — Project-based software engineering: teams design, implement, test, and document a full software product using industry practices.">Software Engineering Laboratory</span>
+                    <span class="course-badge" data-i18n="course6" data-tooltip="COMP 455 — Theory of computation: finite automata, regular languages, pushdown automata, context-free languages, Turing machines, and undecidable problems.">Models of Languages and Computation</span>
                 </div>
             </div>
         </div>
@@ -178,7 +179,7 @@
                         <span class="skill-badge"><i class="devicon-python-plain"></i>Python</span>
                         <span class="skill-badge"><i class="devicon-c-plain"></i>C</span>
                         <span class="skill-badge"><i class="devicon-cplusplus-plain"></i>C++</span>
-                        <span class="skill-badge"><i class="devicon-postgresql-plain"></i>SQL</span>
+                        <span class="skill-badge"><i class="devicon-mysql-plain"></i>SQL</span>
                         <span class="skill-badge"><i class="devicon-swift-plain"></i>SwiftUI</span>
                     </div>
                 </div>
@@ -208,7 +209,7 @@
         <div class="container">
             <h2 data-i18n="nav.leadership">Leadership</h2>
             <div class="leadership-item">
-                <h3>Pearl Hacks Hackathon</h3>
+                <h3><a href="https://pearlhacks.com/" target="_blank" class="org-link">Pearl Hacks Hackathon</a></h3>
                 <div class="leadership-role">
                     <h4 data-i18n="lead1.role1">Director of Event Support (Apr 2025 – Present)</h4>
                     <ul class="leadership-list">
@@ -225,7 +226,7 @@
                 </div>
             </div>
             <div class="leadership-item">
-                <h3>UNC Computer Science Experience Labs</h3>
+                <h3><a href="https://csxl.unc.edu/welcome" target="_blank" class="org-link">UNC Computer Science Experience Labs</a></h3>
                 <div class="leadership-role">
                     <h4 data-i18n="lead2.role1">Student Ambassador (Aug 2025 – Present)</h4>
                     <ul class="leadership-list">
@@ -277,6 +278,7 @@
                 'nav.interests':  'Interests',
                 // Hero
                 'hero.tagline': 'Computer Science & Statistics @ UNC Chapel Hill building APIs, systems, and software products',
+                'hero.resume': 'Get Resume',
                 // About
                 'about.text': "Hi! I'm a Computer Science and Statistics & Analytics student at the University of North Carolina at Chapel Hill graduating in May 2027. I have mainly focused on backend engineering, APIs, systems architecture, and software engineering workflows, with experience building production pipelines and scalable backend services. I'm also a member of the UNC Quantum Computing club!",
                 // Projects
@@ -345,6 +347,7 @@
                 'nav.interests':  'Interesses',
                 // Hero
                 'hero.tagline': 'Ciência da Computação & Estatística @ UNC Chapel Hill construindo APIs, sistemas e produtos de software',
+                'hero.resume': 'Ver Currículo',
                 // About
                 'about.text': 'Olá! Sou estudante de Ciência da Computação e Estatística & Análise na Universidade da Carolina do Norte em Chapel Hill, com formatura prevista para maio de 2027. Tenho focado principalmente em engenharia backend, APIs, arquitetura de sistemas e fluxos de trabalho em engenharia de software, com experiência na construção de pipelines de produção e serviços backend escaláveis. Também sou membra do clube de Computação Quântica da UNC!',
                 // Projects
@@ -411,7 +414,7 @@
             currentLang = lang;
             localStorage.setItem('lang', lang);
             document.documentElement.lang = lang;
-            document.title = lang === 'pt' ? 'Luisa M. Tanure - Portfólio' : 'Luisa M. Tanure - Portfolio';
+            document.title = lang === 'pt' ? 'Luisa Tanure - Portfólio' : 'Luisa Tanure - Portfolio';
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
