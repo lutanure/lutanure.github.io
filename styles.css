@@ -515,6 +515,58 @@ p {
     margin-top: 1rem;
 }
 
+/* Project Resources */
+.project-screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.screenshot-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.screenshot-item img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #d0ddd6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: block;
+}
+
+.screenshot-caption {
+    font-size: 0.875rem;
+    color: #777;
+    text-align: center;
+}
+
+.project-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.project-demo img {
+    max-width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #d0ddd6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.project-demo-label {
+    font-size: 0.9rem;
+    color: #777;
+}
+
 /* Experience Section */
 #experience {
     background: linear-gradient(135deg, #f5faf8 0%, #fff 100%);

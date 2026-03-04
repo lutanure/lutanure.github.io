@@ -46,7 +46,7 @@
                 <a href="mailto:luisa.mtanure@gmail.com" class="btn btn-outline">Email</a>
                 <a href="https://github.com/lutanure" target="_blank" class="btn btn-outline">GitHub</a>
                 <a href="https://linkedin.com/in/luisa-tanure" target="_blank" class="btn btn-outline">LinkedIn</a>
-                <a href="resume.pdf" target="_blank" class="btn btn-resume" data-i18n="hero.resume">Get Resume</a>
+                <a href="resources/resume.pdf" target="_blank" class="btn btn-resume" data-i18n="hero.resume" data-i18n-href="hero.resume.href">Get Resume</a>
             </div>
         </div>
     </section>
@@ -324,7 +324,8 @@
                 'nav.interests':  'Interests',
                 // Hero
                 'hero.tagline': 'Computer Science & Statistics @ UNC Chapel Hill building APIs, systems, and software products',
-                'hero.resume': 'Get Resume',
+                'hero.resume':      'Get Resume',
+                'hero.resume.href': 'resources/resume.pdf',
                 // About
                 'about.text': "Hi! I'm a Computer Science and Statistics & Analytics student at the University of North Carolina at Chapel Hill graduating in May 2027. I have mainly focused on backend engineering, APIs, systems architecture, and software engineering workflows, with experience building production pipelines and scalable backend services. I'm also a member of the UNC Quantum Computing club!",
                 // Projects
@@ -410,13 +411,14 @@
                 'funfacts.pets': '// ── Pets ──────────────────────────────────────────────────────────────────',
                 'funfacts.pets.dogs': 'DOGS',
                 'funfacts.pets.cats': 'CATS',
-                'funfacts.dogs.comment': '// best roommates ever',
-                'funfacts.cats.comment': '// chaotic neutral',
+                'funfacts.dogs.comment': '// always making me laugh',
+                'funfacts.cats.comment': '// independent but secretly loving',
                 'funfacts.friends': '// ── Friends ───────────────────────────────────────────────────────────────',
                 'funfacts.friends.list': 'BEST_FRIENDS_LOCATIONS',
                 'funfacts.friends.comment': '// my world map is basically a friend map',
                 'funfacts.family': '// ── Family ────────────────────────────────────────────────────────────────',
                 'funfacts.family.brother': 'OLDER_BROTHER',
+                'funfacts.family.brother.value': '"exists"',
                 'funfacts.brother.comment': '// and somehow still the cool one',
                 'funfacts.activities': '// ── Activities ────────────────────────────────────────────────────────────',
                 'funfacts.activities.sports': 'SPORTS',
@@ -438,7 +440,8 @@
                 'nav.interests':  'Interesses',
                 // Hero
                 'hero.tagline': 'Ciência da Computação & Estatística @ UNC Chapel Hill construindo APIs, sistemas e produtos de software',
-                'hero.resume': 'Ver Currículo',
+                'hero.resume':      'Ver Currículo',
+                'hero.resume.href': 'resources/Resume_PTBR_.pdf',
                 // About
                 'about.text': 'Olá! Sou estudante de Ciência da Computação e Estatística & Análise na Universidade da Carolina do Norte em Chapel Hill, com formatura prevista para maio de 2027. Tenho focado principalmente em engenharia backend, APIs, arquitetura de sistemas e fluxos de trabalho em engenharia de software, com experiência na construção de pipelines de produção e serviços backend escaláveis. Também sou membra do clube de Computação Quântica da UNC!',
                 // Projects
@@ -557,6 +560,13 @@
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key] !== undefined) {
                     el.textContent = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                const key = el.getAttribute('data-i18n-href');
+                if (translations[lang][key] !== undefined) {
+                    el.setAttribute('href', translations[lang][key]);
                 }
             });
 
