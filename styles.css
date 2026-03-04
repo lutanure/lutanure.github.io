@@ -839,6 +839,70 @@ p {
     visibility: visible;
 }
 
+/* Fun Facts Section */
+#funfacts {
+    background: linear-gradient(135deg, #e8f0ec 0%, #f0f5f3 100%);
+}
+
+.code-block {
+    background: #1e1e1e;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.code-block-header {
+    background: #2d2d2d;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.code-dots {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.code-filename {
+    color: #999;
+    font-size: 0.85rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code-content {
+    padding: 1.5rem;
+    margin: 0;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #d4d4d4;
+}
+
+.code-content code {
+    font-family: inherit;
+}
+
+.code-keyword  { color: #569cd6; }
+.code-class    { color: #4ec9b0; }
+.code-comment  { color: #6a9955; }
+.code-string   { color: #ce9178; }
+.code-number   { color: #b5cea8; }
+.code-variable { color: #9cdcfe; }
+
 /* Footer */
 .footer {
     background-color: #222;
