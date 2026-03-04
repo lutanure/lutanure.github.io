@@ -67,7 +67,7 @@
                 <div class="project-card">
                     <div class="project-card-header">
                         <a href="projects/csxl-agentic-ai-refactor.html" class="project-title-link">
-                            <h3>CSXL Agentic AI Refactor</h3>
+                            <h3 data-i18n="project1.title">CSXL Agentic AI Refactor</h3>
                         </a>
                         <button class="project-toggle" aria-expanded="false" aria-label="Toggle details">
                             <span class="toggle-icon">▼</span>
@@ -77,14 +77,14 @@
                         <p data-i18n="project1.desc">Refactoring CSXL web platform to support agentic AI development workflows, acceptance testing, and repository standards.</p>
                         <div class="project-card-footer">
                             <a href="https://tarheels.live/s26comp523teama/" target="_blank" class="project-link" data-i18n="project1.link">View Project →</a>
-                            <a href="projects/csxl-agentic-ai-refactor.html" class="project-link">Read More →</a>
+                            <a href="projects/csxl-agentic-ai-refactor.html" class="project-link" data-i18n="readmore">Read More →</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-card-header">
                         <a href="projects/dottrack.html" class="project-title-link">
-                            <h3>dotTrack</h3>
+                            <h3 data-i18n="project2.title">dotTrack</h3>
                         </a>
                         <button class="project-toggle" aria-expanded="false" aria-label="Toggle details">
                             <span class="toggle-icon">▼</span>
@@ -94,14 +94,14 @@
                         <p data-i18n="project2.desc">SwiftUI wellness tracking application featuring visualization dashboards and historical trend analysis.</p>
                         <div class="project-card-footer">
                             <a href="https://github.com/lutanure/dotTrack" target="_blank" class="project-link" data-i18n="project2.link">View on GitHub →</a>
-                            <a href="projects/dottrack.html" class="project-link">Read More →</a>
+                            <a href="projects/dottrack.html" class="project-link" data-i18n="readmore">Read More →</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-card-header">
                         <a href="projects/val-the-valkyrie.html" class="project-title-link">
-                            <h3>Val the Valkyrie</h3>
+                            <h3 data-i18n="project3.title">Val the Valkyrie</h3>
                         </a>
                         <button class="project-toggle" aria-expanded="false" aria-label="Toggle details">
                             <span class="toggle-icon">▼</span>
@@ -110,7 +110,7 @@
                     <div class="project-details">
                         <p data-i18n="project3.desc">Arcade-style JavaFX game with level progression mechanics using MVC, Observer, and Factory patterns.</p>
                         <div class="project-card-footer">
-                            <a href="projects/val-the-valkyrie.html" class="project-link">Read More →</a>
+                            <a href="projects/val-the-valkyrie.html" class="project-link" data-i18n="readmore">Read More →</a>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
         <div class="container">
             <h2 data-i18n="nav.education">Education</h2>
             <div class="education-item">
-                <h3>University of North Carolina at Chapel Hill</h3>
+                <h3 data-i18n="edu.university">University of North Carolina at Chapel Hill</h3>
                 <p class="degree" data-i18n="edu.degree">Bachelor of Science in Computer Science and Statistics &amp; Analytics</p>
                 <p class="expected" data-i18n="edu.expected">Expected May 2027</p>
 
@@ -271,15 +271,15 @@
                     </div>
                     <span class="code-filename">FunFacts.java</span>
                 </div>
-                <pre class="code-content"><code><span class="code-comment">/**
+                <pre class="code-content"><code><span class="code-comment" data-i18n="funfacts.header">/**
  * FunFacts.java
  * — things about me beyond the résumé —
  */</span>
 <span class="code-keyword">public class</span> <span class="code-class">FunFacts</span> {
 
-    <span class="code-comment">// ── Pets ──────────────────────────────────────────────────────────────────</span>
-    <span class="code-keyword">private static final int</span>  <span class="code-variable">DOGS</span> = <span class="code-number">4</span>;   <span class="code-comment">// best roommates ever</span>
-    <span class="code-keyword">private static final int</span>  <span class="code-variable">CATS</span> = <span class="code-number">1</span>;   <span class="code-comment">// chaotic neutral</span>
+    <span class="code-comment" data-i18n="funfacts.pets">// ── Pets ──────────────────────────────────────────────────────────────────</span>
+    <span class="code-keyword">private static final int</span>  <span class="code-variable">DOGS</span> = <span class="code-number">4</span>;   <span class="code-comment" data-i18n="funfacts.dogs.comment">// best roommates ever</span>
+    <span class="code-keyword">private static final int</span>  <span class="code-variable">CATS</span> = <span class="code-number">1</span>;   <span class="code-comment" data-i18n="funfacts.cats.comment">// chaotic neutral</span>
 
 }</code></pre>
             </div>
@@ -311,11 +311,15 @@
                 // About
                 'about.text': "Hi! I'm a Computer Science and Statistics & Analytics student at the University of North Carolina at Chapel Hill graduating in May 2027. I have mainly focused on backend engineering, APIs, systems architecture, and software engineering workflows, with experience building production pipelines and scalable backend services. I'm also a member of the UNC Quantum Computing club!",
                 // Projects
+                'project1.title': 'CSXL Agentic AI Refactor',
                 'project1.desc': 'Refactoring CSXL web platform to support agentic AI development workflows, acceptance testing, and repository standards.',
                 'project1.link': 'View Project →',
+                'project2.title': 'dotTrack',
                 'project2.desc': 'SwiftUI wellness tracking application featuring visualization dashboards and historical trend analysis.',
                 'project2.link': 'View on GitHub →',
+                'project3.title': 'Val the Valkyrie',
                 'project3.desc': 'Arcade-style JavaFX game with level progression mechanics using MVC, Observer, and Factory patterns.',
+                'readmore': 'Read More →',
                 // Experience
                 'exp1.role':     'BTG Pactual — Software Engineering Intern',
                 'exp1.location': 'São Paulo, Brazil | June 2025 – August 2025',
@@ -327,6 +331,7 @@
                 'exp2.b1': 'Taught computer science fundamentals to students in underserved communities',
                 'exp2.b2': 'Led project-based learning and digital literacy initiatives',
                 // Education
+                'edu.university': 'University of North Carolina at Chapel Hill',
                 'edu.degree':     'Bachelor of Science in Computer Science and Statistics & Analytics',
                 'edu.expected':   'Expected May 2027',
                 'edu.coursework': 'Relevant Coursework',
@@ -382,6 +387,10 @@
                 'course6.tooltip': "COMP 455 — Theory of computation: finite automata, regular languages, pushdown automata, context-free languages, Turing machines, and undecidable problems.",
                 // Fun Facts
                 'nav.funfacts': 'Fun Facts',
+                'funfacts.header': '/**\n * FunFacts.java\n * — things about me beyond the résumé —\n */',
+                'funfacts.pets': '// ── Pets ──────────────────────────────────────────────────────────────────',
+                'funfacts.dogs.comment': '// best roommates ever',
+                'funfacts.cats.comment': '// chaotic neutral',
                 // Footer
                 'footer.rights': 'All rights reserved.',
             },
@@ -400,11 +409,15 @@
                 // About
                 'about.text': 'Olá! Sou estudante de Ciência da Computação e Estatística & Análise na Universidade da Carolina do Norte em Chapel Hill, com formatura prevista para maio de 2027. Tenho focado principalmente em engenharia backend, APIs, arquitetura de sistemas e fluxos de trabalho em engenharia de software, com experiência na construção de pipelines de produção e serviços backend escaláveis. Também sou membra do clube de Computação Quântica da UNC!',
                 // Projects
+                'project1.title': 'CSXL Agentic AI Refactor',
                 'project1.desc': 'Refatoração da plataforma web CSXL para suportar fluxos de trabalho de desenvolvimento com IA agêntica, testes de aceitação e padrões de repositório.',
                 'project1.link': 'Ver Projeto →',
+                'project2.title': 'dotTrack',
                 'project2.desc': 'Aplicativo de acompanhamento de bem-estar em SwiftUI com painéis de visualização e análise de tendências históricas.',
                 'project2.link': 'Ver no GitHub →',
+                'project3.title': 'Val the Valkyrie',
                 'project3.desc': 'Jogo de arcade em JavaFX com mecânicas de progressão de fases utilizando os padrões MVC, Observer e Factory.',
+                'readmore': 'Leia Mais →',
                 // Experience
                 'exp1.role':     'BTG Pactual — Estagiária de Engenharia de Software',
                 'exp1.location': 'São Paulo, Brasil | Junho 2025 – Agosto 2025',
@@ -416,6 +429,7 @@
                 'exp2.b1': 'Ensinei fundamentos de ciência da computação a estudantes em situação de vulnerabilidade',
                 'exp2.b2': 'Liderei iniciativas de aprendizado baseado em projetos e letramento digital',
                 // Education
+                'edu.university': 'Universidade da Carolina do Norte em Chapel Hill',
                 'edu.degree':     'Bacharelado em Ciência da Computação e Estatística & Análise',
                 'edu.expected':   'Previsão: Maio de 2027',
                 'edu.coursework': 'Disciplinas Cursadas',
@@ -471,6 +485,10 @@
                 'course6.tooltip': "COMP 455 — Teoria da computação: autômatos finitos, linguagens regulares, autômatos de pilha, linguagens livres de contexto, máquinas de Turing e problemas indecidíveis.",
                 // Fun Facts
                 'nav.funfacts': 'Curiosidades',
+                'funfacts.header': '/**\n * FunFacts.java\n * — coisas sobre mim além do currículo —\n */',
+                'funfacts.pets': '// ── Animais de Estimação ───────────────────────────────────────────────────',
+                'funfacts.dogs.comment': '// melhores colegas de quarto',
+                'funfacts.cats.comment': '// neutro caótico',
                 // Footer
                 'footer.rights': 'Todos os direitos reservados.',
             }
