@@ -269,20 +269,20 @@
                         <span class="dot dot-yellow"></span>
                         <span class="dot dot-green"></span>
                     </div>
-                    <span class="code-filename">FunFacts.java</span>
+                    <span class="code-filename" data-i18n="funfacts.filename">FunFacts.java</span>
                 </div>
                 <pre class="code-content"><code><span class="code-comment" data-i18n="funfacts.header">/**
  * FunFacts.java
  * — things about me beyond the résumé —
  */</span>
-<span class="code-keyword">public class</span> <span class="code-class">FunFacts</span> {
+<span class="code-keyword">public class</span> <span class="code-class" data-i18n="funfacts.class">FunFacts</span> {
 
     <span class="code-comment" data-i18n="funfacts.pets">// ── Pets ──────────────────────────────────────────────────────────────────</span>
-    <span class="code-keyword">private static final int</span>  <span class="code-variable">DOGS</span> = <span class="code-number">4</span>;   <span class="code-comment" data-i18n="funfacts.dogs.comment">// best roommates ever</span>
-    <span class="code-keyword">private static final int</span>  <span class="code-variable">CATS</span> = <span class="code-number">1</span>;   <span class="code-comment" data-i18n="funfacts.cats.comment">// chaotic neutral</span>
+    <span class="code-keyword">private static final int</span>  <span class="code-variable" data-i18n="funfacts.pets.dogs">DOGS</span> = <span class="code-number">4</span>;   <span class="code-comment" data-i18n="funfacts.dogs.comment">// best roommates ever</span>
+    <span class="code-keyword">private static final int</span>  <span class="code-variable" data-i18n="funfacts.pets.cats">CATS</span> = <span class="code-number">1</span>;   <span class="code-comment" data-i18n="funfacts.cats.comment">// chaotic neutral</span>
 
     <span class="code-comment" data-i18n="funfacts.friends">// ── Friends ───────────────────────────────────────────────────────────────</span>
-    <span class="code-keyword">private static final</span> <span class="code-class">String</span>[] <span class="code-variable">BEST_FRIENDS</span> = {
+    <span class="code-keyword">private static final</span> <span class="code-class">String</span>[] <span class="code-variable" data-i18n="funfacts.friends.list">BEST_FRIENDS_LOCATIONS</span> = {
         <span class="code-string">"Eindhoven, Netherlands"</span>,
         <span class="code-string">"Seoul, South Korea"</span>,
         <span class="code-string">"Cuernavaca, Mexico"</span>,
@@ -293,10 +293,10 @@
     };  <span class="code-comment" data-i18n="funfacts.friends.comment">// my world map is basically a friend map</span>
 
     <span class="code-comment" data-i18n="funfacts.family">// ── Family ────────────────────────────────────────────────────────────────</span>
-    <span class="code-keyword">private static final</span> <span class="code-class">String</span>  <span class="code-variable">OLDER_BROTHER</span> = <span class="code-string">"exists"</span>;  <span class="code-comment" data-i18n="funfacts.brother.comment">// and somehow still the cool one</span>
+    <span class="code-keyword">private static final</span> <span class="code-class">String</span>  <span class="code-variable" data-i18n="funfacts.family.brother">OLDER_BROTHER</span> = <span class="code-string" data-i18n="funfacts.family.brother.value">"exists"</span>;  <span class="code-comment" data-i18n="funfacts.brother.comment">// and somehow still the cool one</span>
 
     <span class="code-comment" data-i18n="funfacts.activities">// ── Activities ────────────────────────────────────────────────────────────</span>
-    <span class="code-keyword">private static final</span> <span class="code-class">String</span>[] <span class="code-variable">SPORTS</span> = { <span class="code-string">"running"</span>, <span class="code-string">"snowboarding"</span>, <span class="code-string">"hiking"</span> };  <span class="code-comment" data-i18n="funfacts.activities.comment">// three ways to reset</span>
+    <span class="code-keyword">private static final</span> <span class="code-class">String</span>[] <span class="code-variable" data-i18n="funfacts.activities.sports">SPORTS</span> = { <span class="code-string" data-i18n="funfacts.activities.one">"running"</span>, <span class="code-string" data-i18n="funfacts.activities.two">"snowboarding"</span>, <span class="code-string" data-i18n="funfacts.activities.three">"hiking"</span> };  <span class="code-comment" data-i18n="funfacts.activities.comment">// three ways to reset</span>
 
 }</code></pre>
             </div>
@@ -508,16 +508,26 @@
                 'course6.tooltip': "COMP 455 — Teoria da computação: autômatos finitos, linguagens regulares, autômatos de pilha, linguagens livres de contexto, máquinas de Turing e problemas indecidíveis.",
                 // Fun Facts
                 'nav.funfacts': 'Curiosidades',
-                'funfacts.header': '/**\n * FunFacts.java\n * — coisas sobre mim além do currículo —\n */',
+                'funfacts.filename': 'Curiosidades.java',
+                'funfacts.class': 'Curiosidades',
+                'funfacts.header': '/**\n * Curiosidades.java\n * — coisas sobre mim além do currículo —\n */',
                 'funfacts.pets': '// ── Animais de Estimação ───────────────────────────────────────────────────',
-                'funfacts.dogs.comment': '// melhores colegas de quarto',
-                'funfacts.cats.comment': '// neutro caótico',
+                'funfacts.pets.dogs': 'CACHORROS',
+                'funfacts.pets.cats': 'GATOS',
+                'funfacts.dogs.comment': '// tiram minhas maiores rizadas',
+                'funfacts.cats.comment': '// independente e amorosa',
                 'funfacts.friends': '// ── Amigos ────────────────────────────────────────────────────────────────',
-                'funfacts.friends.comment': '// meu mapa-múndi é basicamente um mapa de amigos',
+                'funfacts.friends.list': 'LOCAIS_DOS_MELHORES_AMIGOS',
+                'funfacts.friends.comment': '// mesmo espalhados continuamos melhores amigos e nos encontramos sempre que possível',
                 'funfacts.family': '// ── Família ───────────────────────────────────────────────────────────────',
-                'funfacts.brother.comment': '// e de alguma forma ainda o mais legal',
+                'funfacts.family.brother': 'IRMÃO_MAIS_VELHO',
+                'funfacts.family.brother.value': 'existe',
+                'funfacts.brother.comment': '// o melhor do mundo',
                 'funfacts.activities': '// ── Atividades ────────────────────────────────────────────────────────────',
                 'funfacts.activities.comment': '// três formas de recarregar',
+                'funfacts.activities.one' : 'corrida',
+                'funfacts.activities.two' : 'snowboarding',
+                'funfacts.activities.three' : 'trilhas',
                 // Footer
                 'footer.rights': 'Todos os direitos reservados.',
             }
