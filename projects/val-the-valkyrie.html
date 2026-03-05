@@ -56,14 +56,13 @@
         <div class="container">
             <h2 data-i18n="overview.h2">Overview</h2>
             <div class="project-body">
-                <p data-i18n="overview.p1">Val the Valkyrie is an arcade-style 2D game built with JavaFX. Players control Val, a Norse warrior, across multiple levels with increasing difficulty. Each level introduces new enemy types, environmental hazards, and collectibles, with a progression system that rewards exploration and combat skill.</p>
-                <p data-i18n="overview.p2">The game was built as a software engineering exercise with a strong emphasis on design patterns. Clean separation of concerns — game logic, UI rendering, and state management — makes the codebase easy to extend and test.</p>
+                <p data-i18n="overview.p1">Val the Valkyrie is an arcade-style 2D game built with JavaFX. Players control Val, a Norse warrior, across multiple levels with increasing difficulty. Each level introduces more enemies progressively.</p>
+                <p data-i18n="overview.p2">The game was built as a software engineering exercise with a strong emphasis on design patterns. Clean separation of concerns (game logic, UI rendering, and state management) makes the codebase easy to extend, test, and allows for better maintainability.</p>
                 <ul>
-                    <li data-i18n="overview.li1">MVC architecture separating game state, rendering, and input handling</li>
-                    <li data-i18n="overview.li2">Observer pattern for event-driven game loop updates (enemy defeat, level completion)</li>
-                    <li data-i18n="overview.li3">Factory pattern for spawning enemies and power-ups per level configuration</li>
+                    <li data-i18n="overview.li1">MVC architecture separating game state, rendering, and input handling for increased modularity and decoupling.</li>
+                    <li data-i18n="overview.li2">Observer pattern for event-driven game loop updates (enemy collisions, level completion)</li>
+                    <li data-i18n="overview.li3">Factory pattern for spawning enemies per level configuration</li>
                     <li data-i18n="overview.li4">Multiple levels with progressive difficulty scaling</li>
-                    <li data-i18n="overview.li5">Custom sprite animations and collision detection</li>
                 </ul>
             </div>
         </div>
@@ -145,15 +144,14 @@
                 'nav.leadership': 'Leadership',
                 'nav.interests':  'Interests',
                 'back':           '← Back to Projects',
-                'tagline':        'An arcade-style JavaFX game featuring a Norse warrior navigating levels, defeating enemies, and collecting power-ups — built with MVC, Observer, and Factory design patterns.',
+                'tagline':        'An arcade-style JavaFX game featuring a Norse warrior navigating levels, evading enemies, and collecting trasure. Built with MVC, Observer, and Factory design patterns.',
                 'overview.h2':    'Overview',
-                'overview.p1':    'Val the Valkyrie is an arcade-style 2D game built with JavaFX. Players control Val, a Norse warrior, across multiple levels with increasing difficulty. Each level introduces new enemy types, environmental hazards, and collectibles, with a progression system that rewards exploration and combat skill.',
-                'overview.p2':    'The game was built as a software engineering exercise with a strong emphasis on design patterns. Clean separation of concerns — game logic, UI rendering, and state management — makes the codebase easy to extend and test.',
-                'overview.li1':   'MVC architecture separating game state, rendering, and input handling',
-                'overview.li2':   'Observer pattern for event-driven game loop updates (enemy defeat, level completion)',
-                'overview.li3':   'Factory pattern for spawning enemies and power-ups per level configuration',
+                'overview.p1':    'Val the Valkyrie is an arcade-style 2D game built with JavaFX. Players control Val, a Norse warrior, across multiple levels with increasing difficulty. Each level introduces more enemies progressively.',
+                'overview.p2':    'The game was built as a software engineering exercise with a strong emphasis on design patterns. Clean separation of concerns (game logic, UI rendering, and state management) makes the codebase easy to extend, test and maintain.',
+                'overview.li1':   'MVC architecture separating game state, rendering, and input handling for increased modularity and decoupling',
+                'overview.li2':   'Observer pattern for event-driven game loop updates (enemy collisions, level completion)',
+                'overview.li3':   'Factory pattern for spawning enemies per level configuration',
                 'overview.li4':   'Multiple levels with progressive difficulty scaling',
-                'overview.li5':   'Custom sprite animations and collision detection',
                 'github.link':    'View on GitHub →',
                 'techstack.h2':   'Tech Stack',
                 'techstack.p':    'Built entirely in Java using the JavaFX framework for rendering and event handling.',
