@@ -3,7 +3,6 @@
 (function () {
     'use strict';
 
-    // Static metadata — year + major flag (not stored in translations)
     var ITEMS = [
         { id: 1,  year: '2009', major: true  },
         { id: 2,  year: '2016', major: true  },
@@ -18,10 +17,10 @@
         { id: 11, year: '2025', major: true  },
     ];
 
+    var selectedIndex = 0;
+
     // ── i18n helpers ─────────────────────────────────────────────────────────
     function t(lang, key) {
-        /* translations is const in the inline script; accessible here via
-           the shared global lexical environment of non-module <script> tags */
         return (translations && translations[lang] && translations[lang][key]) || '';
     }
 
@@ -35,49 +34,36 @@
         return bullets;
     }
 
-    // ── Open / close helpers ─────────────────────────────────────────────────
-    function openItem(item) {
-        var btn  = item.querySelector('.tl-dot');
-        var card = item.querySelector('.tl-card');
-        item.classList.add('tl-open');
-        if (btn)  btn.setAttribute('aria-expanded', 'true');
-        if (card) card.setAttribute('aria-hidden', 'false');
+    // ── Panel render ─────────────────────────────────────────────────────────
+    function renderPanel(lang) {
+        var panel = document.getElementById('tl-panel');
+        if (!panel) return;
+
+        var meta    = ITEMS[selectedIndex];
+        var title   = t(lang, 'tl' + meta.id + '.title');
+        var period  = t(lang, 'tl' + meta.id + '.period');
+        var desc    = t(lang, 'tl' + meta.id + '.desc');
+        var bullets = getBullets(lang, meta.id);
+
+        var html = '<strong class="tl-panel-title">' + title + '</strong>';
+        if (period) html += '<span class="tl-panel-period">' + period + '</span>';
+        if (desc)   html += '<p class="tl-panel-desc">' + desc + '</p>';
+        if (bullets.length) {
+            html += '<ul>' + bullets.map(function (b) {
+                return '<li>' + b + '</li>';
+            }).join('') + '</ul>';
+        }
+        panel.innerHTML = html;
     }
 
-    function closeItem(item) {
-        var btn  = item.querySelector('.tl-dot');
-        var card = item.querySelector('.tl-card');
-        item.classList.remove('tl-open');
-        if (btn)  btn.setAttribute('aria-expanded', 'false');
-        if (card) card.setAttribute('aria-hidden', 'true');
-    }
-
-    function closeAll() {
-        document.querySelectorAll('#timeline-root .tl-item.tl-open')
-            .forEach(closeItem);
-    }
-
-    // ── Per-dot event wiring ─────────────────────────────────────────────────
-    function attachEvents(btn, item, card) {
-        var open = function () { closeAll(); openItem(item); };
-        var closeIfLeft = function (e) {
-            if (!item.contains(e.relatedTarget)) closeItem(item);
-        };
-
-        // Hover (desktop)
-        btn.addEventListener('mouseenter', open);
-        btn.addEventListener('mouseleave', closeIfLeft);
-        card.addEventListener('mouseleave', closeIfLeft);
-
-        // Keyboard
-        btn.addEventListener('focus', open);
-        btn.addEventListener('blur',  closeIfLeft);
-
-        // Click / tap — toggle; on mobile this is the primary interaction
-        btn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            item.classList.contains('tl-open') ? closeItem(item) : open();
+    // ── Select a dot ─────────────────────────────────────────────────────────
+    function selectDot(idx, lang) {
+        selectedIndex = idx;
+        document.querySelectorAll('#timeline-root .tl-dot').forEach(function (d, i) {
+            d.classList.toggle('tl-dot-active', i === idx);
+            d.setAttribute('aria-pressed', i === idx ? 'true' : 'false');
         });
+        renderPanel(lang);
     }
 
     // ── Main render ──────────────────────────────────────────────────────────
@@ -95,65 +81,38 @@
         track.className = 'tl-track';
 
         ITEMS.forEach(function (meta, idx) {
-            var title   = t(lang, 'tl' + meta.id + '.title');
-            var period  = t(lang, 'tl' + meta.id + '.period');
-            var desc    = t(lang, 'tl' + meta.id + '.desc');
-            var bullets = getBullets(lang, meta.id);
-            var cardId  = 'tl-card-' + meta.id;
-            var pos     = idx % 2 === 0 ? 'tl-pos-above' : 'tl-pos-below';
+            var title = t(lang, 'tl' + meta.id + '.title');
 
             var item = document.createElement('div');
-            item.className = 'tl-item' +
-                (meta.major ? ' tl-major' : ' tl-minor') + ' ' + pos;
+            item.className = 'tl-item' + (meta.major ? ' tl-major' : ' tl-minor');
 
-            // Card / tooltip
-            var card = document.createElement('div');
-            card.className = 'tl-card';
-            card.id = cardId;
-            card.setAttribute('role', 'tooltip');
-            card.setAttribute('aria-hidden', 'true');
-
-            var html = '<strong class="tl-card-title">' + title + '</strong>';
-            if (period) html += '<span class="tl-card-period">' + period + '</span>';
-            if (desc)   html += '<p class="tl-card-desc">' + desc + '</p>';
-            if (bullets.length) {
-                html += '<ul>' + bullets.map(function (b) {
-                    return '<li>' + b + '</li>';
-                }).join('') + '</ul>';
-            }
-            card.innerHTML = html;
-
-            // Dot button (focusable)
             var btn = document.createElement('button');
-            btn.className = 'tl-dot';
+            btn.className = 'tl-dot' + (idx === selectedIndex ? ' tl-dot-active' : '');
             btn.type = 'button';
             btn.setAttribute('aria-label', meta.year + ': ' + title);
-            btn.setAttribute('aria-expanded', 'false');
-            btn.setAttribute('aria-controls', cardId);
+            btn.setAttribute('aria-pressed', idx === selectedIndex ? 'true' : 'false');
 
-            // Year label
             var yearEl = document.createElement('span');
             yearEl.className = 'tl-year';
             yearEl.setAttribute('aria-hidden', 'true');
             yearEl.textContent = meta.year;
 
-            item.appendChild(card);
+            btn.addEventListener('mouseenter', function () { selectDot(idx, lang); });
+            btn.addEventListener('focus',      function () { selectDot(idx, lang); });
+            btn.addEventListener('click',      function () { selectDot(idx, lang); });
+
             item.appendChild(btn);
             item.appendChild(yearEl);
             track.appendChild(item);
-
-            attachEvents(btn, item, card);
         });
 
         root.appendChild(track);
+        renderPanel(lang);
     }
 
     // ── Bootstrap ────────────────────────────────────────────────────────────
-    // currentLang is `let` from the inline script — accessible here
     renderTimeline(currentLang);
 
-    // Re-render when user switches language (additive listener; safe alongside
-    // the existing setLanguage() call on the same buttons)
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
             renderTimeline(btn.dataset.lang);
