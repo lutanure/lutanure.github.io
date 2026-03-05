@@ -984,15 +984,21 @@ p {
     font-style: italic;
 }
 
+/* ── Scroll wrapper (owns the overflow; lets ::before span full scrollable width) */
+.tl-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1.5rem;
+}
+
 /* ── Track ──────────────────────────────────────────────────────────────────── */
 .tl-track {
     position: relative;
     display: flex;
     height: 72px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: max-content;
+    min-width: 100%;
     padding: 0 1rem;
-    margin-bottom: 1.5rem;
 }
 
 /* Horizontal centre line */

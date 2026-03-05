@@ -15,7 +15,7 @@
         { id: 9,  year: '2023', major: true  },
         { id: 10, year: '2024', major: true  },
         { id: 11, year: '2025', major: true  },
-        { id: 12, year: '2026', major: false },
+        { id: 12, year: '2026', major: true  },
     ];
 
     var selectedIndex = 0;
@@ -78,6 +78,8 @@
         if (subtitleEl) subtitleEl.textContent = t(lang, 'tl.hint');
 
         root.innerHTML = '';
+        var wrapper = document.createElement('div');
+        wrapper.className = 'tl-scroll-wrapper';
         var track = document.createElement('div');
         track.className = 'tl-track';
 
@@ -107,7 +109,8 @@
             track.appendChild(item);
         });
 
-        root.appendChild(track);
+        wrapper.appendChild(track);
+        root.appendChild(wrapper);
         renderPanel(lang);
     }
 
