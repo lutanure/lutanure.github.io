@@ -13,8 +13,9 @@
         { id: 7,  year: '2021', major: false },
         { id: 8,  year: '2022', major: true  },
         { id: 9,  year: '2023', major: true  },
-        { id: 10, year: '2024', major: false },
+        { id: 10, year: '2024', major: true  },
         { id: 11, year: '2025', major: true  },
+        { id: 12, year: '2026', major: false },
     ];
 
     var selectedIndex = 0;
