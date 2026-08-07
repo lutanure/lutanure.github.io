@@ -567,7 +567,8 @@ p {
     gap: 0.75rem;
 }
 
-.project-demo img {
+.project-demo img,
+.project-demo video {
     max-width: 100%;
     max-height: 520px;
     object-fit: contain;
