@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commonplace — Luisa M. Tanure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- Nav Overlay (mobile) -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hamburger Button (mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="nav-brand">LT;</a>
+        <ul class="nav-menu">
+            <li><a href="../index.html#about"      data-i18n="nav.about">About</a></li>
+            <li><a href="../index.html#projects"   data-i18n="nav.projects">Projects</a></li>
+            <li><a href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="../index.html#education"  data-i18n="nav.education">Education</a></li>
+            <li><a href="../index.html#skills"     data-i18n="nav.skills">Skills</a></li>
+            <li><a href="../index.html#leadership" data-i18n="nav.leadership">Leadership</a></li>
+            <li><a href="../index.html#interests"  data-i18n="nav.interests">Interests</a></li>
+            <li><a href="../index.html#funfacts"   data-i18n="nav.funfacts">Fun Facts</a></li>
+            <li><a href="../index.html#timeline"   data-i18n="nav.timeline">Timeline</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="pt">PT</button>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link" data-i18n="back">← Back to Projects</a>
+            <h1>Commonplace</h1>
+            <p class="project-tagline" data-i18n="tagline">A mobile commonplace book for saving, organizing, and finding the ideas and references you want to keep.</p>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section project-section bg-light">
+        <div class="container">
+            <h2 data-i18n="overview.h2">Overview</h2>
+            <div class="project-body">
+                <p data-i18n="overview.p1">Commonplace is a mobile app for building a personal reference library across ideas, notes, articles, books, films, music, and more.</p>
+                <p data-i18n="overview.p2">I built the core mobile experience with Expo, React Native, and TypeScript. The app brings together a searchable library, type filters, custom item types and tags, item details, and flows to create, edit, and delete entries.</p>
+                <ul>
+                    <li data-i18n="overview.li1">Create, edit, and delete saved items with optional details and source links</li>
+                    <li data-i18n="overview.li2">Organize references with built-in or custom item types and tags</li>
+                    <li data-i18n="overview.li3">Search and filter the library, then open items to view their details</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section project-section bg-dark">
+        <div class="container">
+            <h2 data-i18n="techstack.h2">Tech Stack</h2>
+            <div class="project-body">
+                <p data-i18n="techstack.p">A cross-platform mobile app built with Expo and React Native in TypeScript, using React Navigation for screen flows and AsyncStorage to keep the library on the device.</p>
+                <div class="project-tech-grid">
+                    <span class="skill-badge">Expo</span>
+                    <span class="skill-badge"><i class="devicon-react-original"></i>React Native</span>
+                    <span class="skill-badge"><i class="devicon-typescript-plain"></i>TypeScript</span>
+                    <span class="skill-badge">React Navigation</span>
+                    <span class="skill-badge">AsyncStorage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation -->
+    <section class="section project-section bg-light">
+        <div class="container">
+            <h2 data-i18n="motivation.h2">Motivation</h2>
+            <div class="project-body">
+                <p data-i18n="motivation.p1">I wanted a more intentional alternative to scattered saves: one place for ideas, notes, articles, books, and other references I might want to return to later. Commonplace is designed as a personal reference library that makes saving and rediscovering useful material easier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Challenge -->
+    <section class="section project-section bg-dark">
+        <div class="container">
+            <h2 data-i18n="challenges.h2">Design Challenge</h2>
+            <div class="project-body">
+                <p data-i18n="challenges.p1">A personal library needs to support many kinds of material without making every save feel like filling out a form. I designed flexible entries with optional details, custom types, and tags while keeping browsing, search, and item details consistent.</p>
+                <p data-i18n="challenges.p2">AI-assisted enrichment and rediscovery are longer-term directions. The current focus is the core experience of capturing, organizing, searching, and revisiting saved items.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="section project-section bg-light">
+        <div class="container">
+            <h2 data-i18n="resources.h2">Resources</h2>
+            <div class="project-body" style="max-width: 900px; margin: 0 auto;">
+                <p class="tl-hint" style="margin-top: 0;" data-i18n="resources.soon">Screenshots and a demo are coming soon.</p>
+                <!-- Media goes here — same markup as the other project pages:
+                <div class="project-screenshots">
+                    <div class="screenshot-item">
+                        <img src="../resources/commonplace_ss_library.png" alt="Commonplace library screen">
+                        <span class="screenshot-caption" data-i18n="resources.cap1">Library</span>
+                    </div>
+                </div>
+                <div class="project-demo">
+                    <img src="../resources/commonplace_demo.gif" alt="Commonplace demo">
+                    <span class="project-demo-label" data-i18n="resources.demo">Live Demo</span>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Luisa M. Tanure. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                'nav.about':      'About',
+                'nav.projects':   'Projects',
+                'nav.experience': 'Experience',
+                'nav.education':  'Education',
+                'nav.skills':     'Skills',
+                'nav.leadership': 'Leadership',
+                'nav.interests':  'Interests',
+                'back':           '← Back to Projects',
+                'tagline':        'A mobile commonplace book for saving, organizing, and finding the ideas and references you want to keep.',
+                'overview.h2':    'Overview',
+                'overview.p1':    'Commonplace is a mobile app for building a personal reference library across ideas, notes, articles, books, films, music, and more.',
+                'overview.p2':    'I built the core mobile experience with Expo, React Native, and TypeScript. The app brings together a searchable library, type filters, custom item types and tags, item details, and flows to create, edit, and delete entries.',
+                'overview.li1':   'Create, edit, and delete saved items with optional details and source links',
+                'overview.li2':   'Organize references with built-in or custom item types and tags',
+                'overview.li3':   'Search and filter the library, then open items to view their details',
+                'techstack.h2':   'Tech Stack',
+                'techstack.p':    'A cross-platform mobile app built with Expo and React Native in TypeScript, using React Navigation for screen flows and AsyncStorage to keep the library on the device.',
+                'motivation.h2':  'Motivation',
+                'motivation.p1':  'I wanted a more intentional alternative to scattered saves: one place for ideas, notes, articles, books, and other references I might want to return to later. Commonplace is designed as a personal reference library that makes saving and rediscovering useful material easier.',
+                'challenges.h2':  'Design Challenge',
+                'challenges.p1':  'A personal library needs to support many kinds of material without making every save feel like filling out a form. I designed flexible entries with optional details, custom types, and tags while keeping browsing, search, and item details consistent.',
+                'challenges.p2':  'AI-assisted enrichment and rediscovery are longer-term directions. The current focus is the core experience of capturing, organizing, searching, and revisiting saved items.',
+                'resources.h2':   'Resources',
+                'resources.soon': 'Screenshots and a demo are coming soon.',
+                'resources.cap1': 'Library',
+                'resources.demo': 'Live Demo',
+                'footer.rights':  'All rights reserved.',
+            },
+            pt: {
+                'nav.about':      'Sobre',
+                'nav.projects':   'Projetos Recentes',
+                'nav.experience': 'Experiência',
+                'nav.education':  'Educação',
+                'nav.skills':     'Habilidades',
+                'nav.leadership': 'Liderança',
+                'nav.interests':  'Interesses',
+                'back':           '← Voltar para Projetos',
+                'tagline':        'Uma biblioteca pessoal no celular para guardar, organizar e reencontrar as ideias e referências que você quer manter.',
+                'overview.h2':    'Visão Geral',
+                'overview.p1':    'Commonplace é um app para criar uma biblioteca pessoal de referências com ideias, anotações, artigos, livros, filmes, músicas e muito mais.',
+                'overview.p2':    'Desenvolvi a experiência principal para celular com Expo, React Native e TypeScript. O app reúne uma biblioteca com busca, filtros por tipo, categorias personalizadas, tags, detalhes dos itens e fluxos para criar, editar e excluir registros.',
+                'overview.li1':   'Criar, editar e excluir itens com detalhes opcionais e links para as fontes',
+                'overview.li2':   'Organizar referências com tipos predefinidos ou personalizados e tags',
+                'overview.li3':   'Buscar e filtrar a biblioteca e abrir cada item para ver seus detalhes',
+                'techstack.h2':   'Tecnologias',
+                'techstack.p':    'Um app mobile multiplataforma construído com Expo e React Native em TypeScript, usando React Navigation para a navegação entre telas e AsyncStorage para manter a biblioteca no próprio aparelho.',
+                'motivation.h2':  'Motivação',
+                'motivation.p1':  'Eu queria uma alternativa mais intencional a itens salvos espalhados por vários lugares: um só espaço para ideias, anotações, artigos, livros e outras referências às quais eu possa querer voltar. Commonplace foi pensado como uma biblioteca pessoal que facilita guardar e reencontrar materiais úteis.',
+                'challenges.h2':  'Desafio de Design',
+                'challenges.p1':  'Uma biblioteca pessoal precisa aceitar materiais muito diferentes sem transformar cada registro em um formulário. Modelei itens flexíveis, com detalhes opcionais, tipos personalizados e tags, mantendo consistentes a navegação, a busca e a visualização dos detalhes.',
+                'challenges.p2':  'Enriquecimento e redescoberta com IA são possibilidades para versões futuras. O foco atual é a experiência principal de registrar, organizar, buscar e revisitar itens salvos.',
+                'resources.h2':   'Recursos',
+                'resources.soon': 'Capturas de tela e uma demo em breve.',
+                'resources.cap1': 'Biblioteca',
+                'resources.demo': 'Demo ao Vivo',
+                'footer.rights':  'Todos os direitos reservados.',
+            }
+        };
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key] !== undefined) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navbar    = document.getElementById('navbar');
+        const overlay   = document.getElementById('navOverlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navbar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navbar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navbar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+        });
+
+        // Apply saved language on load
+        setLanguage(localStorage.getItem('lang') || 'en');
+    </script>
+</body>
+</html>
