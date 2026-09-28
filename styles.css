@@ -260,7 +260,7 @@ p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--rust) 22%, var(--paper)) 0%, color-mix(in srgb, var(--ochre) 22%, var(--paper)) 100%);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--rust) 12%, var(--paper)) 0%, color-mix(in srgb, var(--ochre) 38%, var(--paper)) 60%);
     padding: 6rem 2rem;
     text-align: center;
     border-bottom: 3px solid var(--rust);
@@ -458,7 +458,7 @@ p {
 
 /* Project Detail Pages */
 .project-hero {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--rust) 22%, var(--paper)) 0%, color-mix(in srgb, var(--ochre) 22%, var(--paper)) 100%);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--rust) 12%, var(--paper)) 0%, color-mix(in srgb, var(--ochre) 38%, var(--paper)) 60%);
     padding: 5rem 2rem 3.5rem;
     border-bottom: 3px solid var(--rust);
 }
