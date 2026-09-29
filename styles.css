@@ -1052,9 +1052,9 @@ p {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--plum);
+    background: var(--ochre);
     border: 3px solid var(--cream);
-    box-shadow: 0 0 0 2px var(--plum);
+    box-shadow: 0 0 0 2px var(--ochre);
     cursor: pointer;
     z-index: 2;
     padding: 0;
@@ -1065,7 +1065,7 @@ p {
     width: 12px;
     height: 12px;
     background: var(--cream);
-    border: 2.5px solid var(--plum);
+    border: 2.5px solid var(--ochre);
     box-shadow: none;
 }
 
@@ -1074,7 +1074,7 @@ p {
 .tl-dot.tl-dot-active {
     outline: none;
     transform: translate(-50%, -50%) scale(1.4);
-    box-shadow: 0 0 0 6px rgba(var(--plum-rgb), 0.22);
+    box-shadow: 0 0 0 6px rgba(198, 138, 46, 0.3);
 }
 
 /* ── Year label ─────────────────────────────────────────────────────────────── */
