@@ -27,7 +27,7 @@
 
     function getBullets(lang, id) {
         var bullets = [];
-        for (var i = 1; i <= 6; i++) {
+        for (var i = 1; i <= 10; i++) {
             var b = t(lang, 'tl' + id + '.b' + i);
             if (!b) break;
             bullets.push(b);
