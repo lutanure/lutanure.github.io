@@ -837,7 +837,8 @@
         };
 
         // ─── Language switcher ────────────────────────────────────────────────────────
-        let currentLang = localStorage.getItem('lang') || 'en';
+        const urlLang = new URLSearchParams(location.search).get('lang');  // e.g. ?lang=pt
+        let currentLang = (['en', 'pt'].includes(urlLang) && urlLang) || localStorage.getItem('lang') || 'en';
 
         function setLanguage(lang) {
             currentLang = lang;

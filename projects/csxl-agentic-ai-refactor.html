@@ -212,8 +212,9 @@
             btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
         });
 
-        // Apply saved language on load
-        setLanguage(localStorage.getItem('lang') || 'en');
+        // Apply language from the link (?lang=pt / ?lang=en), else the saved one
+        const urlLang = new URLSearchParams(location.search).get('lang');  // e.g. ?lang=pt
+        setLanguage((['en', 'pt'].includes(urlLang) && urlLang) || localStorage.getItem('lang') || 'en');
     </script>
 </body>
 </html>
